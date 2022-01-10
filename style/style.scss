@@ -3,7 +3,7 @@ body{
     padding: 0;
     font-family: 'Barlow Condensed', sans-serif;
     display: grid;
-    grid-template-columns: minmax(30px, 20%) minmax(270px, 640px) minmax(270px, 640px) minmax(270px, 640px)  minmax(30px, 20%);
+    grid-template-columns: 20% minmax(20%, 640px) minmax(20%, 640px) minmax(20%, 640px)  20%;
     grid-template-rows: 6rem auto auto auto 1rem;
     grid-template-areas: 
         ". . . . ."
@@ -40,7 +40,9 @@ body{
         .logo{
             text-align: center;
             img{
+                max-width: 415px;
                 width: 65%;
+                min-width: 175px;
                 border-radius: 20px
             };
         }

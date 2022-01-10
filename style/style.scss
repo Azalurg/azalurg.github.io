@@ -1,0 +1,49 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Barlow Condensed', sans-serif;
+    display: grid;
+    grid-template-columns: minmax(30px, 20%) minmax(270px, 640px) minmax(270px, 640px) minmax(270px, 640px)  minmax(30px, 20%);
+    grid-template-rows: 6rem auto auto auto 1rem;
+    grid-template-areas: 
+        ". . . . ."
+        ". aside header header ."
+        ". aside section section ."
+        ". aside footer footer ."
+        ". . . . .";
+    
+    header{
+        grid-area: header;
+        border: 1px solid black;
+        h1{
+            margin: 0
+        }
+        h3{
+            margin-top: 0;
+        }
+    }
+
+    section{
+        grid-area: section;
+        border: 1px solid black;
+        
+    }
+
+    footer{
+        grid-area: footer;
+        border: 1px solid black;
+    }
+
+    aside{
+        grid-area: aside;
+        border: 1px solid black;
+        .logo{
+            text-align: center;
+            img{
+                width: 65%;
+                border-radius: 20px
+            };
+        }
+        
+    }
+}

@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  font-family: 'Barlow Condensed', sans-serif;
+  color: #1c1c1c;
+  background: #071e3d;
+  background: -webkit-gradient(linear, left top, right top, color-stop(5%, #071e3d), color-stop(65%, #0ccead), to(#2cb460));
+  background: linear-gradient(90deg, #071e3d 5%, #0ccead 65%, #2cb460 100%);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(0, 1fr) (minmax(200px, 400px))[3] minmax(0, 1fr);
+      grid-template-columns: minmax(0, 1fr) repeat(3, minmax(200px, 400px)) minmax(0, 1fr);
+  -ms-grid-rows: 6rem auto auto auto 1rem;
+      grid-template-rows: 6rem auto auto auto 1rem;
+      grid-template-areas: ". . . . ." ". aside main main ." ". . . . .";
+}
+
+body main {
+  background-color: white;
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: main;
+}
+
+body main header {
+  background-color: #333333;
+  color: white;
+  padding: 20px;
+}
+
+body main header #name {
+  color: #0ccead;
+  font-weight: 700;
+  text-align: left;
+  padding: 20px;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+
+body main header #role {
+  position: relative;
+  font-size: 1.3rem;
+  bottom: 20px;
+  left: 20px;
+  text-align: left;
+}
+
+body main header #about {
+  padding: 20px 0;
+}
+
+body main section {
+  padding: 20px;
+}
+
+body aside {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: aside;
+  background-color: #333333;
+  color: white;
+  padding: 20px;
+}
+
+body aside .logo {
+  margin: 20px 0;
+  text-align: center;
+}
+
+body aside .logo img {
+  max-width: 220px;
+  width: 65%;
+  min-width: 175px;
+  border-radius: 20px;
+}
+
+body aside .link a {
+  color: white;
+  margin: 5px 0;
+}
+
+body aside .link .fa {
+  font-size: 2.5rem;
+}
+/*# sourceMappingURL=style.css.map */

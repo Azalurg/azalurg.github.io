@@ -1,50 +1,84 @@
+$black: #1c1c1c;
+$gray: #333333;
+$lightblue: #0ccead;
+$darkblue: #071e3d;
+$green: #2cb460;
+
+
+
 body{
     margin: 0;
     padding: 0;
+    font-size: 1rem;
     font-family: 'Barlow Condensed', sans-serif;
+    color: $black;
+    background: rgb(7,30,61);
+    background: linear-gradient(90deg, rgba(7,30,61,1) 5%, rgba(12,206,173,1) 65%, rgba(44,180,96,1) 100%);
     display: grid;
-    grid-template-columns: 20% minmax(20%, 640px) minmax(20%, 640px) minmax(20%, 640px)  20%;
+    grid-template-columns: minmax(0, 1fr) repeat(3, minmax(200px, 400px)) minmax(0, 1fr);
     grid-template-rows: 6rem auto auto auto 1rem;
     grid-template-areas: 
         ". . . . ."
-        ". aside header header ."
-        ". aside section section ."
-        ". aside footer footer ."
+        ". aside main main ."
         ". . . . .";
     
-    header{
-        grid-area: header;
-        border: 1px solid black;
-        h1{
-            margin: 0
+    main{
+        background-color: white;
+        grid-area: main;
+        header{
+            background-color: $gray;
+            color: white;
+            padding: 20px;
+            #name{
+                color: $lightblue;
+                font-weight: 700;
+                text-align: left;
+                padding: 20px;
+                font-size: 2.5rem;
+                letter-spacing: 2px;
+            }
+            #role{
+                position: relative;
+                font-size: 1.3rem;
+                bottom: 20px;
+                left: 20px;
+                text-align: left;
+            }
+            #about{
+                padding: 20px 0;
+            }
         }
-        h3{
-            margin-top: 0;
+
+        section{
+            padding: 20px;
         }
-    }
 
-    section{
-        grid-area: section;
-        border: 1px solid black;
-        
-    }
-
-    footer{
-        grid-area: footer;
-        border: 1px solid black;
     }
 
     aside{
         grid-area: aside;
-        border: 1px solid black;
+        background-color: $gray;
+        color: white;
+        padding: 20px;
         .logo{
+            margin: 20px 0;
             text-align: center;
             img{
-                max-width: 415px;
+                max-width: 220px;
                 width: 65%;
                 min-width: 175px;
                 border-radius: 20px
             };
+        }
+        .link{
+            a{
+                color: white;
+                margin: 5px 0;
+                
+            }
+            .fa{
+                font-size: 2.5rem;
+            }
         }
         
     }

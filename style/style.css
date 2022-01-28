@@ -84,4 +84,24 @@ body aside .link a {
 body aside .link .fa {
   font-size: 2.5rem;
 }
+
+body .skip-nav-link {
+  background-color: #333333;
+  color: #0ccead;
+  padding: 0.5rem 1.5rem;
+  position: absolute;
+  border-radius: 0.25rem;
+  -webkit-transform: translateY(-120%);
+          transform: translateY(-120%);
+  -webkit-transition: -webkit-transform 400ms ease-in;
+  transition: -webkit-transform 400ms ease-in;
+  transition: transform 400ms ease-in;
+  transition: transform 400ms ease-in, -webkit-transform 400ms ease-in;
+  left: 2rem;
+}
+
+body .skip-nav-link:focus {
+  -webkit-transform: translateY(20%);
+          transform: translateY(20%);
+}
 /*# sourceMappingURL=style.css.map */

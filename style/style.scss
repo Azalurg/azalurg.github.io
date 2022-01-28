@@ -12,8 +12,8 @@ body{
     font-size: 1rem;
     font-family: 'Barlow Condensed', sans-serif;
     color: $black;
-    background: rgb(7,30,61);
-    background: linear-gradient(90deg, rgba(7,30,61,1) 5%, rgba(12,206,173,1) 65%, rgba(44,180,96,1) 100%);
+    background: $darkblue;
+    background: linear-gradient(90deg, $darkblue 5%, $lightblue 65%, $green 100%);
     display: grid;
     grid-template-columns: minmax(0, 1fr) repeat(3, minmax(200px, 400px)) minmax(0, 1fr);
     grid-template-rows: 6rem auto auto auto 1rem;
@@ -81,5 +81,20 @@ body{
             }
         }
         
+    }
+
+    .skip-nav-link{
+        background-color: $gray;
+        color: $lightblue;
+        padding: 0.5rem 1.5rem;
+        position: absolute; 
+        border-radius: 0.25rem;
+        transform: translateY(-120%);
+        transition: transform 400ms ease-in;
+        left: 2rem
+    }
+
+    .skip-nav-link:focus{
+        transform: translateY(20%)
     }
 }

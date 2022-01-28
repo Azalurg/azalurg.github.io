@@ -85,6 +85,10 @@ body aside .link .fa {
   font-size: 2.5rem;
 }
 
+body aside #skils img {
+  width: 2rem;
+}
+
 body .skip-nav-link {
   background-color: #333333;
   color: #0ccead;

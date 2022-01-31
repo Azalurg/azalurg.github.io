@@ -9,8 +9,8 @@ body {
   background: linear-gradient(90deg, #071e3d 5%, #0ccead 65%, #2cb460 100%);
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: minmax(0, 1fr) (minmax(200px, 400px))[3] minmax(0, 1fr);
-      grid-template-columns: minmax(0, 1fr) repeat(3, minmax(200px, 400px)) minmax(0, 1fr);
+  -ms-grid-columns: minmax(0, 1fr) minmax(100px, 300px) (minmax(200px, 400px))[2] minmax(0, 1fr);
+      grid-template-columns: minmax(0, 1fr) minmax(100px, 300px) repeat(2, minmax(200px, 400px)) minmax(0, 1fr);
   -ms-grid-rows: 6rem auto auto auto 1rem;
       grid-template-rows: 6rem auto auto auto 1rem;
       grid-template-areas: ". . . . ." ". aside main main ." ". . . . .";
@@ -85,8 +85,60 @@ body aside .link .fa {
   font-size: 2.5rem;
 }
 
+body aside #skils ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 0;
+}
+
+body aside #skils ul li {
+  background-color: white;
+  color: black;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  border-radius: 0.25rem;
+  width: 5rem;
+  height: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 0.5em;
+}
+
+body aside #skils ul li .skil-name {
+  margin-top: 0.5rem;
+  display: inline;
+}
+
+body aside #skils ul li:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: 420ms;
+  transition: 420ms;
+  color: white;
+  background: -webkit-gradient(linear, left top, right top, color-stop(5%, #071e3d), color-stop(65%, #0ccead), to(#2cb460));
+  background: linear-gradient(90deg, #071e3d 5%, #0ccead 65%, #2cb460 100%);
+}
+
 body aside #skils img {
-  width: 2rem;
+  width: 2.5rem;
 }
 
 body .skip-nav-link {

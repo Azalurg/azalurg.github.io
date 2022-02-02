@@ -80,7 +80,7 @@ body{
                 font-size: 2.5rem;
             }
         }
-        #skils{
+        #skills, #hobby{
             ul{
                 list-style: none;
                 display: flex;
@@ -99,18 +99,22 @@ body{
                     align-items: center;
                     justify-content: center;
                     margin-bottom: 0.5em;
-                    .skil-name{
-                        margin-top: 0.5rem;
-                        display: inline;
+                    .skil-name, .hobby-name{
+                        position: absolute;
+                        display: none;
+                        text-align: center;
+                        top: 60px;
                     }
                     
                 }
                 li:hover{
                     transform: scale(1.2);
                     transition: 420ms;
-                    color: white;
-                    background: linear-gradient(90deg, $darkblue 5%, $lightblue 65%, $green 100%);
-
+                    background: linear-gradient(90deg, $darkblue 1%, $lightblue 50%, $green 100%);
+                    .skil-name, .hobby-name{
+                        display: inline;
+                        color: white;
+                    }
                 }
 
             }

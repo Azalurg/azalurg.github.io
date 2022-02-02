@@ -85,7 +85,7 @@ body aside .link .fa {
   font-size: 2.5rem;
 }
 
-body aside #skils ul {
+body aside #skills ul, body aside #hobby ul {
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -98,7 +98,7 @@ body aside #skils ul {
   padding: 0;
 }
 
-body aside #skils ul li {
+body aside #skills ul li, body aside #hobby ul li {
   background-color: white;
   color: black;
   -webkit-transform: scale(1);
@@ -122,22 +122,28 @@ body aside #skils ul li {
   margin-bottom: 0.5em;
 }
 
-body aside #skils ul li .skil-name {
-  margin-top: 0.5rem;
-  display: inline;
+body aside #skills ul li .skil-name, body aside #skills ul li .hobby-name, body aside #hobby ul li .skil-name, body aside #hobby ul li .hobby-name {
+  position: absolute;
+  display: none;
+  text-align: center;
+  top: 60px;
 }
 
-body aside #skils ul li:hover {
+body aside #skills ul li:hover, body aside #hobby ul li:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   -webkit-transition: 420ms;
   transition: 420ms;
-  color: white;
-  background: -webkit-gradient(linear, left top, right top, color-stop(5%, #071e3d), color-stop(65%, #0ccead), to(#2cb460));
-  background: linear-gradient(90deg, #071e3d 5%, #0ccead 65%, #2cb460 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(1%, #071e3d), color-stop(50%, #0ccead), to(#2cb460));
+  background: linear-gradient(90deg, #071e3d 1%, #0ccead 50%, #2cb460 100%);
 }
 
-body aside #skils img {
+body aside #skills ul li:hover .skil-name, body aside #skills ul li:hover .hobby-name, body aside #hobby ul li:hover .skil-name, body aside #hobby ul li:hover .hobby-name {
+  display: inline;
+  color: white;
+}
+
+body aside #skills img, body aside #hobby img {
   width: 2.5rem;
 }
 

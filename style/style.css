@@ -9,8 +9,8 @@ body {
   background: linear-gradient(90deg, #071e3d 5%, #0ccead 65%, #2cb460 100%);
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: minmax(0, 1fr) (minmax(200px, 400px))[3] minmax(0, 1fr);
-      grid-template-columns: minmax(0, 1fr) repeat(3, minmax(200px, 400px)) minmax(0, 1fr);
+  -ms-grid-columns: minmax(0, 1fr) minmax(100px, 300px) (minmax(200px, 400px))[2] minmax(0, 1fr);
+      grid-template-columns: minmax(0, 1fr) minmax(100px, 300px) repeat(2, minmax(200px, 400px)) minmax(0, 1fr);
   -ms-grid-rows: 6rem auto auto auto 1rem;
       grid-template-rows: 6rem auto auto auto 1rem;
       grid-template-areas: ". . . . ." ". aside main main ." ". . . . .";
@@ -49,6 +49,7 @@ body main header #role {
 
 body main header #about {
   padding: 20px 0;
+  margin-left: 20px;
 }
 
 body main section {
@@ -76,12 +77,94 @@ body aside .logo img {
   border-radius: 20px;
 }
 
-body aside .link a {
-  color: white;
-  margin: 5px 0;
+body #skills ul, body #hobby ul, body #contact ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 0;
 }
 
-body aside .link .fa {
-  font-size: 2.5rem;
+body #skills ul li, body #hobby ul li, body #contact ul li {
+  background-color: white;
+  color: black;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  border-radius: 0.25rem;
+  width: 5rem;
+  height: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 0.5em;
+}
+
+body #skills ul li .skil-name, body #skills ul li .hobby-name, body #hobby ul li .skil-name, body #hobby ul li .hobby-name, body #contact ul li .skil-name, body #contact ul li .hobby-name {
+  position: absolute;
+  display: none;
+  text-align: center;
+  top: 60px;
+}
+
+body #skills ul li a > .contact-name, body #hobby ul li a > .contact-name, body #contact ul li a > .contact-name {
+  position: absolute;
+  display: none;
+  text-align: center;
+  top: 60px;
+  right: 0px;
+  width: 100%;
+}
+
+body #skills ul li:hover, body #hobby ul li:hover, body #contact ul li:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: 420ms;
+  transition: 420ms;
+  background: -webkit-gradient(linear, left top, right top, color-stop(1%, #071e3d), color-stop(50%, #0ccead), to(#2cb460));
+  background: linear-gradient(90deg, #071e3d 1%, #0ccead 50%, #2cb460 100%);
+}
+
+body #skills ul li:hover .skil-name, body #skills ul li:hover .hobby-name, body #skills ul li:hover .contact-name, body #hobby ul li:hover .skil-name, body #hobby ul li:hover .hobby-name, body #hobby ul li:hover .contact-name, body #contact ul li:hover .skil-name, body #contact ul li:hover .hobby-name, body #contact ul li:hover .contact-name {
+  display: block;
+  color: white;
+}
+
+body #skills img, body #hobby img, body #contact img {
+  width: 2.5rem;
+}
+
+body .skip-nav-link {
+  background-color: #333333;
+  color: #0ccead;
+  padding: 0.5rem 1.5rem;
+  position: absolute;
+  border-radius: 0.25rem;
+  -webkit-transform: translateY(-120%);
+          transform: translateY(-120%);
+  -webkit-transition: -webkit-transform 400ms ease-in;
+  transition: -webkit-transform 400ms ease-in;
+  transition: transform 400ms ease-in;
+  transition: transform 400ms ease-in, -webkit-transform 400ms ease-in;
+  left: 2rem;
+}
+
+body .skip-nav-link:focus {
+  -webkit-transform: translateY(20%);
+          transform: translateY(20%);
 }
 /*# sourceMappingURL=style.css.map */

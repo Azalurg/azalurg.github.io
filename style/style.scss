@@ -4,12 +4,48 @@ $lightblue: #0ccead;
 $darkblue: #071e3d;
 $green: #2cb460;
 
-
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+/* https://piccalil.li/blog/a-modern-css-reset/ */
+/* Box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+picture {
+    margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: 400;
+}
+p{
+    max-width: 30rem;
+}
 
 body{
+    line-height: 1.5;
+    min-height: 100vh;
     margin: 0;
     padding: 0;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-family: 'Barlow Condensed', sans-serif;
     color: $black;
     background: $darkblue;

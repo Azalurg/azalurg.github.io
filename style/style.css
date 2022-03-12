@@ -1,8 +1,6 @@
 /* ------------------- */
 /* Reset               */
 /* ------------------- */
-/* https://piccalil.li/blog/a-modern-css-reset/ */
-/* Box sizing */
 *,
 *::before,
 *::after {
@@ -34,112 +32,42 @@ p {
   font-weight: 400;
 }
 
-p {
-  max-width: 30rem;
-}
-
+/* ------------------- */
+/* Body                */
+/* ------------------- */
 body {
+  padding: 0;
   line-height: 1.5;
   min-height: 100vh;
-  margin: 0;
-  padding: 0;
   font-size: 1.1rem;
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #1c1c1c;
-  background: #071e3d;
-  background: -webkit-gradient(linear, left top, right top, color-stop(5%, #071e3d), color-stop(65%, #0ccead), to(#2cb460));
-  background: linear-gradient(90deg, #071e3d 5%, #0ccead 65%, #2cb460 100%);
+  background: #43ece5;
+  background: linear-gradient(135deg, #43ece5 25%, #071e3d 100%);
+}
+
+main {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: minmax(0, 1fr) minmax(100px, 300px) (minmax(200px, 400px))[2] minmax(0, 1fr);
-      grid-template-columns: minmax(0, 1fr) minmax(100px, 300px) repeat(2, minmax(200px, 400px)) minmax(0, 1fr);
-  -ms-grid-rows: 6rem auto auto auto 1rem;
-      grid-template-rows: 6rem auto auto auto 1rem;
-      grid-template-areas: ". . . . ." ". aside main main ." ". . . . .";
+  -ms-grid-columns: minmax(0, 1fr) minmax(8rem, 24rem) minmax(13rem, 39rem) minmax(0, 1fr);
+      grid-template-columns: minmax(0, 1fr) minmax(8rem, 24rem) minmax(13rem, 39rem) minmax(0, 1fr);
+  -ms-grid-rows: 6rem auto auto auto 2rem;
+      grid-template-rows: 6rem auto auto auto 2rem;
+      grid-template-areas: ". . . . " ". left right ." ". . . . ";
 }
 
-body main {
-  background-color: white;
-  -ms-grid-row: 2;
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 2;
-  grid-area: main;
-}
-
-body main header {
-  background-color: #333333;
-  color: white;
-  padding: 20px;
-}
-
-body main header #name {
-  color: #0ccead;
-  font-weight: 700;
-  text-align: left;
-  padding: 20px;
-  font-size: 2.5rem;
-  letter-spacing: 2px;
-}
-
-body main header #role {
-  position: relative;
-  font-size: 1.3rem;
-  bottom: 20px;
-  left: 20px;
-  text-align: left;
-}
-
-body main header #about {
-  padding: 20px 0;
-  margin-left: 20px;
-}
-
-body main section {
-  padding: 20px;
-}
-
-body aside {
+#left {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
-  grid-area: aside;
-  background-color: #333333;
-  color: white;
-  padding: 20px;
-}
-
-body aside .logo {
-  margin: 20px 0;
-  text-align: center;
-}
-
-body aside .logo img {
-  max-width: 220px;
-  width: 65%;
-  min-width: 175px;
-  border-radius: 20px;
-}
-
-body #skills ul, body #hobby ul, body #contact ul {
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  padding: 0;
-}
-
-body #skills ul li, body #hobby ul li, body #contact ul li {
+  grid-area: left;
   background-color: white;
-  color: black;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  border-radius: 0.25rem;
-  width: 5rem;
-  height: 5rem;
+}
+
+#left #photo img {
+  width: 100%;
+}
+
+#left #introduce {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -147,52 +75,116 @@ body #skills ul li, body #hobby ul li, body #contact ul li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+#left #introduce #name, #left #introduce #surname {
+  font-size: 2.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15rem;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+#left #introduce #title {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: gray;
+}
+
+#left #contact .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 0.5em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: rgba(67, 236, 230, 0.1);
 }
 
-body #skills ul li .skil-name, body #skills ul li .hobby-name, body #hobby ul li .skil-name, body #hobby ul li .hobby-name, body #contact ul li .skil-name, body #contact ul li .hobby-name {
-  position: absolute;
-  display: none;
-  text-align: center;
-  top: 60px;
-}
-
-body #skills ul li a > .contact-name, body #hobby ul li a > .contact-name, body #contact ul li a > .contact-name {
-  position: absolute;
-  display: none;
-  text-align: center;
-  top: 60px;
-  right: 0px;
+#left #contact .box div {
   width: 100%;
+  margin-left: 1rem;
+  border-left: 0.15rem solid #1b7296;
 }
 
-body #skills ul li:hover, body #hobby ul li:hover, body #contact ul li:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  -webkit-transition: 420ms;
-  transition: 420ms;
-  background: -webkit-gradient(linear, left top, right top, color-stop(1%, #071e3d), color-stop(50%, #0ccead), to(#2cb460));
-  background: linear-gradient(90deg, #071e3d 1%, #0ccead 50%, #2cb460 100%);
+#left #contact .box div div {
+  border: none;
 }
 
-body #skills ul li:hover .skil-name, body #skills ul li:hover .hobby-name, body #skills ul li:hover .contact-name, body #hobby ul li:hover .skil-name, body #hobby ul li:hover .hobby-name, body #hobby ul li:hover .contact-name, body #contact ul li:hover .skil-name, body #contact ul li:hover .hobby-name, body #contact ul li:hover .contact-name {
-  display: block;
-  color: white;
+#left #contact .box div .contact-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+  line-height: 0.9;
+  text-transform: uppercase;
+  color: #1b7296;
 }
 
-body #skills img, body #hobby img, body #contact img {
+#left #contact ul {
+  padding: 0;
+}
+
+#left #contact a {
+  text-decoration: none;
+  color: black;
+}
+
+#left #skills li, #left #hobby li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 0.5rem;
+}
+
+#left #skills li div, #left #hobby li div {
+  margin-left: 1rem;
+}
+
+#left img {
   width: 2.5rem;
 }
 
-body .skip-nav-link {
+#left .title {
+  border-left: 0.5rem solid #1b7296;
+  padding-left: 0.5rem;
+}
+
+#right {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: right;
+  background-color: white;
+}
+
+section {
+  padding: 1rem;
+}
+
+.title {
+  font-size: 2.25rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ------------------- */
+/* Skip navigation link*/
+/* ------------------- */
+.skip-nav-link {
   background-color: #333333;
-  color: #0ccead;
+  color: #43ece5;
   padding: 0.5rem 1.5rem;
   position: absolute;
   border-radius: 0.25rem;
@@ -205,7 +197,7 @@ body .skip-nav-link {
   left: 2rem;
 }
 
-body .skip-nav-link:focus {
+.skip-nav-link:focus {
   -webkit-transform: translateY(20%);
           transform: translateY(20%);
 }

@@ -1,14 +1,15 @@
 $black: #1c1c1c;
 $gray: #333333;
-$lightblue: #0ccead;
+$lightblue: #43ece5;
+$blue: #1b7296;
 $darkblue: #071e3d;
 $green: #2cb460;
+$gradient:  linear-gradient(135deg, $lightblue 25%, $darkblue 100%);;
 
 /* ------------------- */
 /* Reset               */
 /* ------------------- */
-/* https://piccalil.li/blog/a-modern-css-reset/ */
-/* Box sizing */
+
 *,
 *::before,
 *::after {
@@ -36,143 +37,150 @@ h6,
 p {
     font-weight: 400;
 }
-p{
-    max-width: 30rem;
-}
+
+/* ------------------- */
+/* Body                */
+/* ------------------- */
 
 body{
+    padding: 0;
     line-height: 1.5;
     min-height: 100vh;
-    margin: 0;
-    padding: 0;
     font-size: 1.1rem;
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: $black;
-    background: $darkblue;
-    background: linear-gradient(90deg, $darkblue 5%, $lightblue 65%, $green 100%);
+    background: rgb(67,236,229);
+    background: $gradient;
+}
+
+main{
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(100px, 300px) repeat(2, minmax(200px, 400px)) minmax(0, 1fr);
-    grid-template-rows: 6rem auto auto auto 1rem;
+    grid-template-columns: minmax(0, 1fr) minmax(8rem, 24rem)  minmax(13rem, 39rem) minmax(0, 1fr);
+    grid-template-rows: 6rem auto auto auto 2rem;
     grid-template-areas: 
-        ". . . . ."
-        ". aside main main ."
-        ". . . . .";
-    
-    main{
-        background-color: white;
-        grid-area: main;
-        header{
-            background-color: $gray;
-            color: white;
-            padding: 20px;
-            #name{
-                color: $lightblue;
-                font-weight: 700;
-                text-align: left;
-                padding: 20px;
-                font-size: 2.5rem;
-                letter-spacing: 2px;
-            }
-            #role{
-                position: relative;
-                font-size: 1.3rem;
-                bottom: 20px;
-                left: 20px;
-                text-align: left;
-            }
-            #about{
-                padding: 20px 0;
-                margin-left: 20px;
-            }
-        }
+        ". . . . "
+        ". left right ."
+        ". . . . ";
+}
 
-        section{
-            padding: 20px;
-        }
-
-    }
-
-    aside{
-        grid-area: aside;
-        background-color: $gray;
-        color: white;
-        padding: 20px;
-        .logo{
-            margin: 20px 0;
-            text-align: center;
-            img{
-                max-width: 220px;
-                width: 65%;
-                min-width: 175px;
-                border-radius: 20px
-            };
-        }
-    }
-
-    #skills, #hobby, #contact{
-        ul{
-            list-style: none;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-            padding: 0;
-            li{
-                background-color: white;
-                color: black;
-                transform: scale(1);
-                border-radius: 0.25rem;
-                width: 5rem;
-                height: 5rem;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                margin-bottom: 0.5em;
-                .skil-name, .hobby-name{
-                    position: absolute;
-                    display: none;
-                    text-align: center;
-                    top: 60px;
-                }
-
-                a > .contact-name{
-                    position: absolute;
-                    display: none;
-                    text-align: center;
-                    top: 60px;
-                    right: 0px;
-                    width: 100%;
-                }
-                
-            }
-            li:hover{
-                transform: scale(1.2);
-                transition: 420ms;
-                background: linear-gradient(90deg, $darkblue 1%, $lightblue 50%, $green 100%);
-                .skil-name, .hobby-name, .contact-name{
-                    display: block;
-                    color: white;
-                }
-            }
-
-        }
+#left{
+    grid-area: left;
+    background-color: white;
+    #photo{
         img{
-            width: 2.5rem;
+            width: 100%;
+        }
+        
+    }
+
+    #introduce{
+        display: flex;
+        flex-direction: column;
+        #name, #surname{
+            font-size: 2.75rem;
+            font-weight: 600;
+            letter-spacing: 0.15rem;
+            line-height: 0.9;
+            text-transform: uppercase;
+        }
+
+        #title{
+            margin-top: 1rem;
+            font-size: 1.2rem;
+            color: gray
         }
     }
 
-    .skip-nav-link{
-        background-color: $gray;
-        color: $lightblue;
-        padding: 0.5rem 1.5rem;
-        position: absolute; 
-        border-radius: 0.25rem;
-        transform: translateY(-120%);
-        transition: transform 400ms ease-in;
-        left: 2rem
+    #contact{
+        .box{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem;
+            margin: 1rem 0;
+            background-color: rgba(67, 236, 230, 0.10);
+            div{
+                width: 100%;
+                margin-left: 1rem;
+                border-left: 0.15rem solid $blue;
+                div{
+                    border: none;
+                }
+                .contact-name{
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    letter-spacing: 0.05rem;
+                    line-height: 0.9;
+                    text-transform: uppercase;
+                    color: $blue;
+                }
+            }
+        }
+        ul{
+            padding: 0;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+
+       
+    }
+    #skills, #hobby{
+        li{
+            display: flex;
+            align-items: center;
+            margin-top: 0.5rem;
+            div{
+                margin-left: 1rem;
+            }
+        }
+    }
+    img{
+        width: 2.5rem;
+    }
+    .title{
+        border-left: 0.5rem solid $blue ;
+        padding-left: 0.5rem;
     }
 
-    .skip-nav-link:focus{
-        transform: translateY(20%)
-    }
+}
+
+#right{
+    grid-area: right;
+    background-color: white;
+}
+
+section{
+    padding: 1rem;
+}
+
+.title{
+    font-size: 2.25rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+}
+
+ul{
+    list-style: none;
+}
+
+/* ------------------- */
+/* Skip navigation link*/
+/* ------------------- */
+
+.skip-nav-link{
+    background-color: $gray;
+    color: $lightblue;
+    padding: 0.5rem 1.5rem;
+    position: absolute; 
+    border-radius: 0.25rem;
+    transform: translateY(-120%);
+    transition: transform 400ms ease-in;
+    left: 2rem
+}
+
+.skip-nav-link:focus{
+    transform: translateY(20%)
 }

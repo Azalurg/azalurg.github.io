@@ -44,21 +44,31 @@ body {
   color: #1c1c1c;
   background: #43ece5;
   background: linear-gradient(135deg, #43ece5 25%, #071e3d 100%);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+      grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  -ms-grid-rows: 6rem auto 2rem;
+      grid-template-rows: 6rem auto 2rem;
+      grid-template-areas: ". . . " ". main ." ". . . ";
 }
 
 main {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: main;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: minmax(0, 1fr) minmax(8rem, 24rem) minmax(13rem, 39rem) minmax(0, 1fr);
-      grid-template-columns: minmax(0, 1fr) minmax(8rem, 24rem) minmax(13rem, 39rem) minmax(0, 1fr);
-  -ms-grid-rows: 6rem auto auto auto 2rem;
-      grid-template-rows: 6rem auto auto auto 2rem;
-      grid-template-areas: ". . . . " ". left right ." ". . . . ";
+  -ms-grid-columns: minmax(8rem, 24rem) minmax(13rem, 39rem);
+      grid-template-columns: minmax(8rem, 24rem) minmax(13rem, 39rem);
+      grid-template-areas: "left right";
+  -webkit-box-shadow: 2rem 2rem 3rem #333333;
+          box-shadow: 2rem 2rem 3rem #333333;
 }
 
 #left {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: left;
   background-color: white;
 }
@@ -88,7 +98,7 @@ main {
 #left #introduce #title {
   margin-top: 1rem;
   font-size: 1.2rem;
-  color: gray;
+  color: #333333;
 }
 
 #left #contact .box {
@@ -104,6 +114,10 @@ main {
   padding: 1rem;
   margin: 1rem 0;
   background-color: rgba(67, 236, 230, 0.1);
+}
+
+#left #contact .box img {
+  width: 2.5rem;
 }
 
 #left #contact .box div {
@@ -134,6 +148,10 @@ main {
   color: black;
 }
 
+#left #skills img, #left #hobby img {
+  width: 1.5rem;
+}
+
 #left #skills li, #left #hobby li {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -148,20 +166,20 @@ main {
   margin-left: 1rem;
 }
 
-#left img {
-  width: 2.5rem;
-}
-
 #left .title {
   border-left: 0.5rem solid #1b7296;
   padding-left: 0.5rem;
 }
 
 #right {
-  -ms-grid-row: 2;
-  -ms-grid-column: 3;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   grid-area: right;
   background-color: white;
+}
+
+#right .title {
+  border-bottom: 0.15rem solid #1b7296;
 }
 
 section {
@@ -175,8 +193,33 @@ section {
   letter-spacing: 0.2rem;
 }
 
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.subsubtitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1rem;
+  line-height: 1;
+  margin-bottom: 1rem;
+  color: black;
+}
+
+.subsubtitle .date {
+  color: #333333;
+}
+
 ul {
   list-style: none;
+}
+
+p {
+  text-align: justify;
 }
 
 /* ------------------- */

@@ -51,16 +51,21 @@ body{
     color: $black;
     background: rgb(67,236,229);
     background: $gradient;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    grid-template-rows: 6rem auto 2rem;
+    grid-template-areas: 
+        ". . . "
+        ". main ."
+        ". . . ";
 }
 
 main{
+    grid-area: main;
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(8rem, 24rem)  minmax(13rem, 39rem) minmax(0, 1fr);
-    grid-template-rows: 6rem auto auto auto 2rem;
-    grid-template-areas: 
-        ". . . . "
-        ". left right ."
-        ". . . . ";
+    grid-template-columns: minmax(8rem, 24rem)  minmax(13rem, 39rem);
+    grid-template-areas: "left right";
+    box-shadow: 2rem 2rem 3rem $gray;
 }
 
 #left{
@@ -87,7 +92,7 @@ main{
         #title{
             margin-top: 1rem;
             font-size: 1.2rem;
-            color: gray
+            color: $gray
         }
     }
 
@@ -99,6 +104,9 @@ main{
             padding: 1rem;
             margin: 1rem 0;
             background-color: rgba(67, 236, 230, 0.10);
+            img{
+                width: 2.5rem;
+            }
             div{
                 width: 100%;
                 margin-left: 1rem;
@@ -127,6 +135,9 @@ main{
        
     }
     #skills, #hobby{
+        img{
+            width: 1.5rem;
+        }
         li{
             display: flex;
             align-items: center;
@@ -136,9 +147,7 @@ main{
             }
         }
     }
-    img{
-        width: 2.5rem;
-    }
+    
     .title{
         border-left: 0.5rem solid $blue ;
         padding-left: 0.5rem;
@@ -149,6 +158,12 @@ main{
 #right{
     grid-area: right;
     background-color: white;
+    // border-left: 1px solid red;
+
+    
+    .title{
+        border-bottom: 0.15rem solid $blue;
+    }
 }
 
 section{
@@ -162,8 +177,33 @@ section{
     letter-spacing: 0.2rem;
 }
 
+.subtitle{
+    font-size: 1.5rem;
+    font-weight: 600;
+    //letter-spacing: 0.05rem;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+}
+
+.subsubtitle{
+    display: flex;
+    font-size: 1rem;
+    line-height: 1;
+    margin-bottom: 1rem;
+    color: black;
+    .date{
+        color: $gray;
+    }
+}
+
+
+
 ul{
     list-style: none;
+}
+
+p{
+    text-align: justify;
 }
 
 /* ------------------- */

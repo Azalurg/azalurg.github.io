@@ -1,10 +1,11 @@
 $black: #1c1c1c;
 $gray: #333333;
+$lightgray: #cccccc;
 $lightblue: #43ece5;
 $blue: #1b7296;
 $darkblue: #071e3d;
 $green: #2cb460;
-$gradient:  linear-gradient(135deg, $lightblue 25%, $darkblue 100%);;
+$gradient:  linear-gradient(135deg, $lightblue 25%, $darkblue 100%);
 
 /* ------------------- */
 /* Reset               */
@@ -65,12 +66,13 @@ main{
     display: grid;
     grid-template-columns: minmax(8rem, 24rem)  minmax(13rem, 39rem);
     grid-template-areas: "left right";
-    box-shadow: 2rem 2rem 3rem $gray;
+    box-shadow: 1rem 1rem 3rem 2rem $black;
 }
 
 #left{
     grid-area: left;
-    background-color: white;
+    background-color: $gray;
+    color:  white;
     #photo{
         img{
             width: 100%;
@@ -92,8 +94,8 @@ main{
         #title{
             margin-top: 1rem;
             font-size: 1.2rem;
-            color: $gray
-        }
+            color: $lightgray
+        }   
     }
 
     #contact{
@@ -103,14 +105,15 @@ main{
             justify-content: space-between;
             padding: 1rem;
             margin: 1rem 0;
-            background-color: rgba(67, 236, 230, 0.10);
+            background-color: rgba(67, 236, 229, 0.2);
             img{
                 width: 2.5rem;
             }
             div{
                 width: 100%;
                 margin-left: 1rem;
-                border-left: 0.15rem solid $blue;
+                border-left: 0.15rem solid $lightblue;
+                color: white;
                 div{
                     border: none;
                 }
@@ -120,9 +123,15 @@ main{
                     letter-spacing: 0.05rem;
                     line-height: 0.9;
                     text-transform: uppercase;
-                    color: $blue;
+                    color: $lightblue;
                 }
             }
+        }
+        .box:hover, .box:focus{
+            background-color: rgba(67, 236, 229, 0.5);
+            border-radius: 1rem;
+            transform: scale(105%);
+            transition: 400ms;
         }
         ul{
             padding: 0;
@@ -136,15 +145,20 @@ main{
     }
     #skills, #hobby{
         img{
-            width: 1.5rem;
+            width: 1.75rem;
         }
         li{
             display: flex;
             align-items: center;
-            margin-top: 0.5rem;
             div{
-                margin-left: 1rem;
+                margin-left: 1.5rem;
             }
+        }
+        li:not(:first-child){
+            margin-top: 0.5rem;
+        }
+        li:not(:last-child){
+            margin-bottom: 0.5rem;
         }
     }
     

@@ -62,15 +62,16 @@ main {
   -ms-grid-columns: minmax(8rem, 24rem) minmax(13rem, 39rem);
       grid-template-columns: minmax(8rem, 24rem) minmax(13rem, 39rem);
       grid-template-areas: "left right";
-  -webkit-box-shadow: 2rem 2rem 3rem #333333;
-          box-shadow: 2rem 2rem 3rem #333333;
+  -webkit-box-shadow: 1rem 1rem 3rem 2rem #1c1c1c;
+          box-shadow: 1rem 1rem 3rem 2rem #1c1c1c;
 }
 
 #left {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: left;
-  background-color: white;
+  background-color: #333333;
+  color: white;
 }
 
 #left #photo img {
@@ -98,7 +99,7 @@ main {
 #left #introduce #title {
   margin-top: 1rem;
   font-size: 1.2rem;
-  color: #333333;
+  color: #cccccc;
 }
 
 #left #contact .box {
@@ -113,7 +114,7 @@ main {
           justify-content: space-between;
   padding: 1rem;
   margin: 1rem 0;
-  background-color: rgba(67, 236, 230, 0.1);
+  background-color: rgba(67, 236, 229, 0.2);
 }
 
 #left #contact .box img {
@@ -123,7 +124,8 @@ main {
 #left #contact .box div {
   width: 100%;
   margin-left: 1rem;
-  border-left: 0.15rem solid #1b7296;
+  border-left: 0.15rem solid #43ece5;
+  color: white;
 }
 
 #left #contact .box div div {
@@ -136,7 +138,16 @@ main {
   letter-spacing: 0.05rem;
   line-height: 0.9;
   text-transform: uppercase;
-  color: #1b7296;
+  color: #43ece5;
+}
+
+#left #contact .box:hover, #left #contact .box:focus {
+  background-color: rgba(67, 236, 229, 0.5);
+  border-radius: 1rem;
+  -webkit-transform: scale(105%);
+          transform: scale(105%);
+  -webkit-transition: 400ms;
+  transition: 400ms;
 }
 
 #left #contact ul {
@@ -149,7 +160,7 @@ main {
 }
 
 #left #skills img, #left #hobby img {
-  width: 1.5rem;
+  width: 1.75rem;
 }
 
 #left #skills li, #left #hobby li {
@@ -159,11 +170,18 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 0.5rem;
 }
 
 #left #skills li div, #left #hobby li div {
-  margin-left: 1rem;
+  margin-left: 1.5rem;
+}
+
+#left #skills li:not(:first-child), #left #hobby li:not(:first-child) {
+  margin-top: 0.5rem;
+}
+
+#left #skills li:not(:last-child), #left #hobby li:not(:last-child) {
+  margin-bottom: 0.5rem;
 }
 
 #left .title {

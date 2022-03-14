@@ -1,10 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="author" content="Azalugr">
         <meta name="description" content="Website with CV">
         <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/Azalurg-Uni-Projects/Frontend-React-Project/main/frontend/public/favicon.ico">
+        
+        <!-- Google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+        rel="stylesheet" />
+        
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="./style/style.css" />
         <title>Patryk Wawrzyniak - CV</title>
@@ -13,153 +21,174 @@
     <body>
         <a class="skip-nav-link" href="#main-content">skip</a>
         <main id="main-content">
-            <header>
-                    <div id="name">Patryk Wawrzyniak</div>
-                    <div id="role">Junior Full-Stack Developer</div>
-                    <div id="about">
-                        The energetic and creative student with ambitions to become a full-stack software developer. Ready to work hard, collect experience and have fun in the IT world.
+            <div id="left">
+                <section id="photo">
+                    <div>
+                        <img src="https://avatars.githubusercontent.com/u/91213389?v=4" alt="My photo">
                     </div>
-            </header>
-            <section id="education">
-                <h1>EDUCATION</h1>
-                <ul>
-                    <li>
-                        <h2>Bachelor's Degree - Computer Science</h2>
-                        <h3>University of Gdańsk</h3>
-                        <h5>October 2020 - June 2023</h5>
-                        <p>
-                            Studies include many computers science subjects like frontend and backend development, computer
-                            networking, OS understanding, servers management, and numeric algorithms.
-                        </p>
-                    </li>
-                </ul>
-            </section>
-            <section id="certificates">
-                <h1>CERTIFICATES</h1>
-                <ul>
-                    <li>
-                        <h3>CCNA R&S: Introduction to Networks</h3>
-                    </li>
-                    <li>
-                        <h3>NDG Linux Essentials</h3>
-                    </li>
-                </ul>
-
-            </section>
-            <section id="no-it-jobs">
-                <h1>Not IT jobs I took </h1>
-                <ul>
-                    <li>
-                        <h3>An employee at the <a href="https://www.polipack.com.pl/en/">Polipack</a> company factory</h3>
-                    </li>
-                    <li>
-                        <h3>Tesco warehouse worker</h3>
-                    </li>
-                    <li>
-                        <h3>Member of the District Electoral Commission</h3>
-                    </li>
-                </ul>
-            </section>
-        </main>
-        <aside>
-            <div class="logo">
-                <img src="./image/photo2.jpg" alt="My photo">
+                </section>
+                <section id="introduce">
+                    <div id="name">Patryk </div>
+                    <div id="surname">Wawrzyniak</div>
+                    <div id="title">Junior Full-Stack Developer</div>
+                </section>
+                <section id="contact">
+                    <div class="title">Contact</div>
+                    <ul>
+                        <li>
+                            <div class="box">
+                                <a href="mailto:patryk31415@gmail.com"><img src="https://cdn-icons-png.flaticon.com/512/2165/2165061.png" style="filter: invert(100%)" alt="Mail"/></a>
+                                <div>
+                                    <a href="mailto:patryk31415@gmail.com"><div class="contact-name">Mail</div></a>
+                                    <a href="mailto:patryk31415@gmail.com"><div class="contact-detiles">patryk31415@gmail.com</div></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="box">
+                                <a href="https://github.com/Azalurg" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" style="filter: invert(100%)" alt="GitHub"/></a>
+                                <div>
+                                    <a href="https://github.com/Azalurg" target="_blank"><div class="contact-name">GitHub</div></a>
+                                    <a href="https://github.com/Azalurg" target="_blank"><div class="contact-detiles">@ Azalurg</div></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="box">
+                                <a href="https://www.linkedin.com/in/patryk-wawrzyniak-73b20b22b/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linkedin/linkedin-original.svg" alt="LinkedIn"/></a>
+                                <div>
+                                    <a href="https://www.linkedin.com/in/patryk-wawrzyniak-73b20b22b/" target="_blank"><div class="contact-name">Linkedin</div></a>
+                                    <a href="https://www.linkedin.com/in/patryk-wawrzyniak-73b20b22b/" target="_blank"><div class="contact-detiles">Patryk Wawrzyniak</div></a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+                <section id="skills">
+                    <div class="title">Skills</div>
+                    <ul>
+                        <li>
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python"/>
+                            <div class="skill-name">Python</div>
+                        </li>
+                        <li>
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript"/>
+                            <div class="skill-name">JavaScript </div>
+                        </li>
+                        <li>
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" alt="Git"/>
+                            <div class="skill-name">Git</div>
+                        </li>
+                        <li>
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="HTML"/>
+                            <div class="skill-name">HTML</div>
+                        </li>
+                        <li>
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="CSS"/>
+                            <div class="skill-name">CSS</div>
+                        </li>
+                        <li>
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" alt="React"/>
+                            <div class="skill-name">React</div>
+                        </li>
+                        <li>
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB"/>
+                            <div class="skill-name">MongoDB</div>
+                        </li>
+                        <li>
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/neo4j/neo4j-original-wordmark.svg" alt="Neo4j"/>
+                            <div class="skill-name">Neo4j</div>
+                        </li>
+                        <li>
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="Docker"/>
+                            <div class="skill-name">Docker</div>
+                        </li>
+                    </ul>
+    
+                </section>
+                <section id="hobby">
+                    <div class="title">Hobbies</div>
+                    <ul>
+                        <li>
+                            <img src="https://cdn3.iconfinder.com/data/icons/glypho-signs/64/user-hiking-512.png" alt="Hiking"/>
+                            <div class="hobby-name">Hiking</div>
+                        </li>
+                        <li>
+                            <img src="https://cdn1.iconfinder.com/data/icons/camping-65/500/backpack-512.png" alt="Bushcraft"/>
+                            <div class="hobby-name">Bushcraft</div>
+                        </li>
+                        <li>
+                            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn4.iconfinder.com%2Fdata%2Ficons%2Fgaming-27%2F300%2Fgaming-fun-entertainment-freetime-pc-game--512.png&f=1&nofb=1" alt="Gaming"/>
+                            <div class="hobby-name">Gaming</div>
+                        </li>
+                        <li>
+                            <img src="https://icons.iconarchive.com/icons/dtafalonso/android-lollipop/512/Headphones-Apollo-icon.png" alt="Music"/>
+                            <div class="hobby-name">Music</div>
+                        </li>
+                        <li>
+                            <img src="https://cdn4.iconfinder.com/data/icons/children-sports-and-games/212/child-kid-extracurricular-007-512.png" alt="Mortal arts"/>
+                            <div class="hobby-name">Aikido</div>
+                        </li>
+                        <li>
+                            <img src="https://i2.wp.com/www.finzdivecenter.com/wp-content/uploads/2016/10/scuba-diver-diving-png-icon-5.png" alt="Diving"/>
+                            <div class="hobby-name">Diving</div>
+                        </li>
+                    </ul>
+    
+                </section>
             </div>
-            <section id="contact">
-                <h2>CONTACT</h2>
-                <ul>
-                    <li>
-                        <div class="link">
-                            <a href="mailto:patryk31415@gmail.com"><img src="https://cdn-icons-png.flaticon.com/512/2165/2165061.png" alt="Mail"/></a>
-                            <a href="mailto:patryk31415@gmail.com"><div class="contact-name">Mail</div></a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="link">
-                            <a href="https://github.com/Azalurg" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" alt="GitHub"/></a>
-                            <a href="https://github.com/Azalurg" target="_blank"><div class="contact-name">GitHub</div></a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="link">
-                            <a href="https://www.linkedin.com/in/patryk-wawrzyniak-73b20b22b/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linkedin/linkedin-original.svg" alt="LinkedIn"/></a>
-                            <a href="https://www.linkedin.com/in/patryk-wawrzyniak-73b20b22b/" target="_blank"><div class="contact-name">Linkedin</div></a>
-                        </div>
-                    </li>
-                </ul>
-            </section>
-            <section id="skills">
-                <h2>SKILLS</h2>
-                <ul>
-                    <li>
-                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python"/>
-                        <div class="skil-name">Python</div>
-                    </li>
-                    <li>
-                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript"/>
-                        <div class="skil-name">JavaScript </div>
-                    </li>
-                    <li>
-                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" alt="Git"/>
-                        <div class="skil-name">Git</div>
-                    </li>
-                    <li>
-                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="HTML"/>
-                        <div class="skil-name">HTML</div>
-                    </li>
-                    <li>
-                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="CSS"/>
-                        <div class="skil-name">CSS</div>
-                    </li>
-                    <li>
-                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" alt="React"/>
-                        <div class="skil-name">React</div>
-                    </li>
-                    <li>
-                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB"/>
-                        <div class="skil-name">MongoDB</div>
-                    </li>
-                    <li>
-                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/neo4j/neo4j-original-wordmark.svg" alt="Neo4j"/>
-                        <div class="skil-name">Neo4j</div>
-                    </li>
-                    <li>
-                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="Docekr"/>
-                        <div class="skil-name">Docekr</div>
-                    </li>
-                </ul>
+            <div id="right">
+                <section id="about">
+                    <div class="title">About me</div>
+                    <div id="description">
+                        <ul>
+                            <li>
+                                <p>The energetic and creative student with ambitions to become a full-stack software developer. Ready to work hard, collect experience and have fun in the IT world.
+                                </p>
+                            </li>
 
-            </section>
-            <section id="hobby">
-                <h2>HOBBIES</h2>
-                <ul>
-                    <li>
-                        <img src="https://cdn3.iconfinder.com/data/icons/glypho-signs/64/user-hiking-512.png" alt="Hiking"/>
-                        <div class="hobby-name">Hiking</div>
-                    </li>
-                    <li>
-                        <img src="https://cdn1.iconfinder.com/data/icons/camping-65/500/backpack-512.png" alt="Bushcraft"/>
-                        <div class="hobby-name">Bushcraft</div>
-                    </li>
-                    <li>
-                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn4.iconfinder.com%2Fdata%2Ficons%2Fgaming-27%2F300%2Fgaming-fun-entertainment-freetime-pc-game--512.png&f=1&nofb=1" alt="Gaming"/>
-                        <div class="hobby-name">Gaming</div>
-                    </li>
-                    <li>
-                        <img src="https://icons.iconarchive.com/icons/dtafalonso/android-lollipop/512/Headphones-Apollo-icon.png" alt="Music"/>
-                        <div class="hobby-name">Music</div>
-                    </li>
-                    <li>
-                        <img src="https://cdn4.iconfinder.com/data/icons/children-sports-and-games/212/child-kid-extracurricular-007-512.png" alt="Mortal arts"/>
-                        <div class="hobby-name">Mortal arts</div>
-                    </li>
-                    <li>
-                        <img src="https://i2.wp.com/www.finzdivecenter.com/wp-content/uploads/2016/10/scuba-diver-diving-png-icon-5.png" alt="Diving"/>
-                        <div class="hobby-name">Diving</div>
-                    </li>
-                </ul>
-
-            </section>
-        </aside>
+                        </ul>
+                    </div>
+                </section>
+                <section id="education">
+                    <div class="title">education</div>
+                    <ul>
+                        <li>
+                            <div class="subtitle">Bachelor's Degree - Computer Science</div>
+                            <div class="subsubtitle"><div class="date">October 2020 - Current</div> &nbsp;
+                            &#160; University of Gdańsk</div>
+                            <p>
+                                Studies include many computers science subjects like frontend and backend development, computer networking, OS understanding, servers management, and numeric algorithms.
+                            </p>
+                        </li>
+                    </ul>
+                </section>
+                <section id="certificates">
+                    <div class="title">certificates</div>
+                    <ul>
+                        <li>
+                            <p>CCNA R&S: Introduction to Networks</p>
+                        </li>
+                        <li>
+                            <p>NDG Linux Essentials</p>
+                        </li>
+                    </ul>
+                </section>
+                <!-- <section id="no-it-jobs">
+                    <div class="title">Jobs not in IT that I took</div>
+                    <ul>
+                        <li>
+                            <div class="subtitle">An employee at the <a href="https://www.polipack.com.pl/en/">Polipack</a> company factory</div>
+                        </li>
+                        <li>
+                            <div class="subtitle">Tesco warehouse worker</div>
+                        </li>
+                        <li>
+                            <div class="subtitle">Member of the District Electoral Commission</div>
+                        </li>
+                    </ul>
+                </section> -->
+            </div>
+        </main>
     </body>
 </html>

@@ -1,0 +1,136 @@
+body{
+    line-height: 1.5;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-size: 1.1rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    color: $black;
+    background: $darkblue;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(100px, 300px) repeat(2, minmax(200px, 400px)) minmax(0, 1fr);
+    grid-template-rows: 6rem auto auto auto 1rem;
+    grid-template-areas: 
+        ". . . . "
+        ". right left ."
+        ". . . . ";
+    
+    main{
+        background-color: white;
+        grid-area: main;
+        header{
+            background-color: $gray;
+            color: white;
+            padding: 20px 20px 20px 0;
+            #name{
+                color: $lightblue;
+                font-weight: 700;
+                text-align: left;
+                padding: 20px 0;
+                font-size: 2.5rem;
+                letter-spacing: 2px;
+            }
+            #role{
+                position: relative;
+                font-size: 1.3rem;
+                bottom: 20px;
+                text-align: left;
+            }
+            #about{
+                padding: 20px 0;
+            }
+        }
+
+        section{
+            padding: 20px;
+        }
+
+    }
+
+    aside{
+        grid-area: aside;
+        background-color: $gray;
+        color: white;
+        padding: 20px;
+        .logo{
+            margin: 20px 0;
+            text-align: center;
+            img{
+                max-width: 220px;
+                width: 65%;
+                min-width: 175px;
+                border-radius: 20px
+            };
+        }
+    }
+
+    #skills, #hobby, #contact{
+        ul{
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            padding: 0;
+            li{
+                background-color: white;
+                color: black;
+                transform: scale(1);
+                border-radius: 0.25rem;
+                width: 5rem;
+                height: 5rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 0.5em;
+                .skill-name, .hobby-name{
+                    position: absolute;
+                    display: none;
+                    text-align: center;
+                    top: 60px;
+                }
+
+                a > .contact-name{
+                    position: absolute;
+                    display: none;
+                    text-align: center;
+                    top: 60px;
+                    right: 0px;
+                    width: 100%;
+                }
+                
+            }
+            li:hover{
+                transition: 420ms;
+                background: $green;
+                .skill-name, .hobby-name, .contact-name{
+                    display: block;
+                    color: white;
+                }
+            }
+
+        }
+        img{
+            width: 2.5rem;
+        }
+    }
+
+    .skip-nav-link{
+        background-color: $gray;
+        color: $lightblue;
+        padding: 0.5rem 1.5rem;
+        position: absolute; 
+        border-radius: 0.25rem;
+        transform: translateY(-120%);
+        transition: transform 400ms ease-in;
+        left: 2rem
+    }
+
+    .skip-nav-link:focus{
+        transform: translateY(20%)
+    }
+}
+
+ul{
+    list-style: none;
+}

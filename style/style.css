@@ -115,6 +115,8 @@ main {
   padding: 1rem;
   margin: 1rem 0;
   background-color: rgba(67, 236, 229, 0.2);
+  -webkit-transition: 400ms;
+  transition: 400ms;
 }
 
 #left #contact .box img {
@@ -261,5 +263,24 @@ p {
 .skip-nav-link:focus {
   -webkit-transform: translateY(20%);
           transform: translateY(20%);
+}
+
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+}
+
+button:hover {
+  -webkit-transform: scale(110%);
+          transform: scale(110%);
+  -webkit-transition: 400ms;
+  transition: 400ms;
 }
 /*# sourceMappingURL=style.css.map */

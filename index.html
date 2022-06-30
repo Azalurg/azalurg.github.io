@@ -9,12 +9,10 @@
         <!-- Google fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
-        rel="stylesheet" />
-        
+        <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="./style/style.css" />
+        <script type="text/javascript" src="scripts.js"></script>
         <title>Patryk Wawrzyniak - CV</title>
     </head>
 
@@ -30,7 +28,7 @@
                 <section id="introduce">
                     <div id="name">Patryk </div>
                     <div id="surname">Wawrzyniak</div>
-                    <div id="title">Junior Full-Stack Developer</div>
+                    <div id="title">Graphics Software Development Intern</div>
                 </section>
                 <section id="contact">
                     <div class="title">Contact</div>
@@ -49,7 +47,7 @@
                                 <a href="https://github.com/Azalurg" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" style="filter: invert(100%)" alt="GitHub"/></a>
                                 <div>
                                     <a href="https://github.com/Azalurg" target="_blank"><div class="contact-name">GitHub</div></a>
-                                    <a href="https://github.com/Azalurg" target="_blank"><div class="contact-detiles">@ Azalurg</div></a>
+                                    <a href="https://github.com/Azalurg" target="_blank"><div class="contact-detiles">@Azalurg</div></a>
                                 </div>
                             </div>
                         </li>
@@ -62,11 +60,20 @@
                                 </div>
                             </div>
                         </li>
+                        <li>
+                            <div class="box">
+                                <a href="https://twitter.com/azalurg" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/twitter/twitter-original.svg" alt="Twitter"/></a>
+                                <div>
+                                    <a href="https://twitter.com/azalurg" target="_blank"><div class="contact-name">Twitter</div></a>
+                                    <a href="https://twitter.com/azalurg" target="_blank"><div class="contact-detiles">@azalurg</div></a>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                 </section>
                 <section id="skills">
-                    <div class="title">Skills</div>
-                    <ul>
+                    <button id="skills_bnt" class="title" onClick="click_me(skills_ul); change_emoji(skills_emoji)">Skills <x id="skills_emoji">👇</x></button>
+                    <ul id="skills_ul" !hidden>
                         <li>
                             <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python"/>
                             <div class="skill-name">Python</div>
@@ -74,6 +81,10 @@
                         <li>
                             <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript"/>
                             <div class="skill-name">JavaScript </div>
+                        </li>
+                        <li>
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="Java"/>
+                            <div class="skill-name">Java</div>
                         </li>
                         <li>
                             <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" alt="Git"/>
@@ -96,46 +107,41 @@
                             <div class="skill-name">MongoDB</div>
                         </li>
                         <li>
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/neo4j/neo4j-original-wordmark.svg" alt="Neo4j"/>
-                            <div class="skill-name">Neo4j</div>
-                        </li>
-                        <li>
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="Docker"/>
-                            <div class="skill-name">Docker</div>
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/kubernetes/kubernetes-plain.svg" alt="K8S"/>
+                            <div class="skill-name">Kubernetes</div>
                         </li>
                     </ul>
-    
                 </section>
                 <section id="hobby">
-                    <div class="title">Hobbies</div>
-                    <ul>
+                    <button id="hobby_bnt" class="title" onClick="click_me(hobby_ul); change_emoji(hobby_emoji)">Hobbies <x id="hobby_emoji">👈</x></button>
+                    <ul id="hobby_ul" hidden>
                         <li>
-                            <img src="https://cdn3.iconfinder.com/data/icons/glypho-signs/64/user-hiking-512.png" alt="Hiking"/>
+                            <img src="images/hiking.png" alt="Hiking"/>
                             <div class="hobby-name">Hiking</div>
                         </li>
                         <li>
-                            <img src="https://cdn1.iconfinder.com/data/icons/camping-65/500/backpack-512.png" alt="Bushcraft"/>
+                            <img src="images/fire.png" alt="Bushcraft"/>
                             <div class="hobby-name">Bushcraft</div>
                         </li>
                         <li>
-                            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn4.iconfinder.com%2Fdata%2Ficons%2Fgaming-27%2F300%2Fgaming-fun-entertainment-freetime-pc-game--512.png&f=1&nofb=1" alt="Gaming"/>
+                            <img src="images/gaming.png" alt="Gaming"/>
                             <div class="hobby-name">Gaming</div>
                         </li>
                         <li>
-                            <img src="https://icons.iconarchive.com/icons/dtafalonso/android-lollipop/512/Headphones-Apollo-icon.png" alt="Music"/>
+                            <img src="images/music.png" alt="Music"/>
                             <div class="hobby-name">Music</div>
                         </li>
                         <li>
-                            <img src="https://cdn4.iconfinder.com/data/icons/children-sports-and-games/212/child-kid-extracurricular-007-512.png" alt="Mortal arts"/>
+                            <img src="images/aikido.png" alt="Mortal arts"/>
                             <div class="hobby-name">Aikido</div>
                         </li>
                         <li>
-                            <img src="https://i2.wp.com/www.finzdivecenter.com/wp-content/uploads/2016/10/scuba-diver-diving-png-icon-5.png" alt="Diving"/>
+                            <img src="images/diving.png" alt="Diving"/>
                             <div class="hobby-name">Diving</div>
                         </li>
                     </ul>
-    
                 </section>
+                
             </div>
             <div id="right">
                 <section id="about">
@@ -143,12 +149,26 @@
                     <div id="description">
                         <ul>
                             <li>
-                                <p>The energetic and creative student with ambitions to become a full-stack software developer. Ready to work hard, collect experience and have fun in the IT world.
-                                </p>
+                                <p>Hi, nice to see you here.</p><br/>
+                                <p>I'm a computer science student and currently work at Intel Polsk. I.m on my way to becoming a junior software developer, but in the future, I would like to try myself as DevOps or Cyber Security Specialist. Visit my Github page and see what I'm doing in my free time or as my Uni projects.</p>
+                                
                             </li>
 
                         </ul>
                     </div>
+                </section>
+                <section id="work-experience">
+                    <div class="title">Work experience</div>
+                    <ul>
+                        <li>
+                            <div class="subtitle">Graphics Software Development Intern</div>
+                            <div class="subsubtitle"><div class="date">July 2022 - Current</div> &nbsp;
+                            &#160; Intel Technology Poland</div>
+                            <p>
+                                Building and modernizing an internal graphics environment for testing graphics cards. 
+                            </p>
+                        </li>
+                    </ul>
                 </section>
                 <section id="education">
                     <div class="title">education</div>
@@ -174,20 +194,6 @@
                         </li>
                     </ul>
                 </section>
-                <!-- <section id="no-it-jobs">
-                    <div class="title">Jobs not in IT that I took</div>
-                    <ul>
-                        <li>
-                            <div class="subtitle">An employee at the <a href="https://www.polipack.com.pl/en/">Polipack</a> company factory</div>
-                        </li>
-                        <li>
-                            <div class="subtitle">Tesco warehouse worker</div>
-                        </li>
-                        <li>
-                            <div class="subtitle">Member of the District Electoral Commission</div>
-                        </li>
-                    </ul>
-                </section> -->
             </div>
         </main>
     </body>

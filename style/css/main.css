@@ -1,0 +1,252 @@
+/* reset src: https://piccalil.li/blog/a-modern-css-reset/ */
+/* Box sizing rules */
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Roboto&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.page-wrapper {
+  display: grid;
+  grid-template-areas: "nav nav nav" "left content right";
+}
+.page-wrapper nav {
+  grid-area: nav;
+}
+.page-wrapper .left {
+  grid-area: left;
+}
+.page-wrapper .content {
+  grid-area: content;
+}
+.page-wrapper .right {
+  grid-area: right;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 1rem 4rem;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+nav ul:nth-of-type(2) {
+  width: 100%;
+  max-width: 420px;
+  justify-content: space-evenly;
+}
+nav img {
+  height: 4rem;
+  width: 4rem;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 3rem;
+  height: 1.5rem;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1rem;
+  width: 1rem;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 1.5rem;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+body {
+  color: hsl(200deg, 0%, 75%);
+  background-color: hsl(200deg, 20%, 5%);
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+  line-height: 1.5;
+  font-size: 1rem;
+  text-align: left;
+  font-weight: 400;
+}
+
+a {
+  color: hsl(125deg, 75%, 45%);
+  text-decoration: none;
+  cursor: pointer;
+}
+a:hover, a:focus {
+  text-decoration: underline;
+  color: hsl(125deg, 90%, 55%);
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Times New Roman", Times, serif;
+  margin-bottom: 0.25em;
+}
+
+h1,
+.h1 {
+  font-size: 2.5rem;
+  margin-top: 0;
+  line-height: 1.1em;
+}
+
+h2,
+.h2 {
+  font-size: 2rem;
+  margin-top: 0;
+  line-height: 1.2em;
+}
+
+h3,
+.h3 {
+  font-size: 1.65rem;
+  margin-top: 0;
+  line-height: 1.3em;
+}
+
+h4,
+.h4 {
+  font-size: 1.4rem;
+  margin-top: 0;
+  line-height: 1.4em;
+}
+
+h5,
+.h5 {
+  font-size: 1.1rem;
+  margin-top: 0;
+  line-height: 1.5em;
+}
+
+h6,
+.h6 {
+  font-size: 0.9rem;
+  margin-top: 0;
+  line-height: 1.6em;
+}
+
+pre {
+  font-family: "Anonymous Pro", monospace;
+}
+
+/*# sourceMappingURL=main.css.map */

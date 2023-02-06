@@ -6,10 +6,10 @@
     <meta name="author" content="Azalugr">
     <meta name="description" content="Website with CV">
     <link rel="icon" type="image/png"
-        href="https://raw.githubusercontent.com/Azalurg-Uni-Projects/Frontend-React-Project/main/frontend/public/favicon.ico">
+        href="https://raw.githubusercontent.com/Azalurg/public/main/images/001.ico">
 
 
-    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="./style/css/main.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <title>Patryk Wawrzyniak - CV</title>
@@ -18,7 +18,10 @@
 <body>
     <a class="skip"></a>
     <div class="page-wrapper">
-        <navbar>
+        <nav>
+            <ul>
+                <img src="https://image.shutterstock.com/image-photo/stock-vector-initial-letter-p-and-p-pp-decorative-ornament-emblem-badge-overlapping-monogram-logo-elegant-450w-1444009340.jpg">
+            </ul>
             <ul>
                 <li>
                     <a href="#about">about</a>
@@ -32,12 +35,21 @@
                 <li>
                     <a href="#projectrs-other">projectrs-other</a>
                 </li>
-                <li>
+                
+            </ul>
+            <ul>
+                <li style="margin-right: 10px">
                     <a href="#contact">contact</a>
+                </li>
+                <li>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
                 </li>
             </ul>
 
-        </navbar>
+        </nav>
         <div class="left" id="socials">
             <ul>
                 <li>
@@ -138,10 +150,29 @@
 
             </section>
             <section id="projects-main">
-
+                <ul>
+                    <li>
+                        <div class="project-content"></div>
+                        <div class="project-image"></div>
+                    </li>
+                    <li>
+                        <div class="project-content"></div>
+                        <div class="project-image"></div>
+                    </li>
+                    <li>
+                        <div class="project-content"></div>
+                        <div class="project-image"></div>
+                    </li>
+                </ul>
             </section>
             <section id="projectrs-other">
-
+                <ul>
+                    <li>
+                        <div class="project-header"></div>
+                        <div class="project-inside"></div>
+                        <div class="tags"></div>
+                    </li>
+                </ul>
             </section>
             <section id="contact">
 

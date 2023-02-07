@@ -1,0 +1,30 @@
+@use "abstracts" as *;
+
+#content {
+    display: grid;
+    grid-column: auto;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#hello {
+    padding: 15%;
+
+    #name {
+        font-family: $ff-roboto;
+        font-size: 5em;
+        margin: 0;
+    }
+
+    #quote {
+        font-size: $fs-h4;
+        font-family: $ff-headers;
+        color: $accent-1;
+        margin-top: $fs-h4;
+    }
+}

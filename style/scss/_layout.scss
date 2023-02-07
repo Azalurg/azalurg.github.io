@@ -1,20 +1,25 @@
-.page-wrapper{
+.page-wrapper {
     display: grid;
-    grid-template-areas: "nav nav nav" "left content right";
+    grid-template-areas: 
+        "nav nav nav" 
+        "socials content workshop";
+    grid-template-columns: 5% 90% 5%;
+    // grid-template-rows: 2rem auto 2rem;
+    // grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
 
-    nav{
+    nav {
         grid-area: nav;
     }
 
-    .left{
-        grid-area: left;
+    #socials {
+        grid-area: socials;
     }
 
-    .content{
+    #content {
         grid-area: content;
     }
 
-    .right{
-        grid-area: right;
+    #workshop {
+        grid-area: workshop;
     }
 }

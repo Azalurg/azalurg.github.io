@@ -1,6 +1,8 @@
 /* reset src: https://piccalil.li/blog/a-modern-css-reset/ */
 /* Box sizing rules */
 @import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Roboto&display=swap");
 *,
 *::before,
 *::after {
@@ -75,19 +77,20 @@ select {
 }
 .page-wrapper {
   display: grid;
-  grid-template-areas: "nav nav nav" "left content right";
+  grid-template-areas: "nav nav nav" "socials content workshop";
+  grid-template-columns: 5% 90% 5%;
 }
 .page-wrapper nav {
   grid-area: nav;
 }
-.page-wrapper .left {
-  grid-area: left;
+.page-wrapper #socials {
+  grid-area: socials;
 }
-.page-wrapper .content {
+.page-wrapper #content {
   grid-area: content;
 }
-.page-wrapper .right {
-  grid-area: right;
+.page-wrapper #workshop {
+  grid-area: workshop;
 }
 
 nav {
@@ -96,6 +99,11 @@ nav {
   align-items: center;
   margin: 0;
   padding: 1rem 4rem;
+  z-index: 11;
+  position: sticky;
+  top: 0;
+  font-size: 1.1rem;
+  background-color: hsl(200deg, 20%, 5%);
 }
 nav ul {
   list-style: none;
@@ -177,7 +185,7 @@ input:checked + .slider:before {
 }
 
 body {
-  color: hsl(200deg, 0%, 75%);
+  color: hsl(200deg, 0%, 85%);
   background-color: hsl(200deg, 20%, 5%);
   font-family: "Roboto", sans-serif;
   min-height: 100vh;
@@ -188,13 +196,13 @@ body {
 }
 
 a {
-  color: hsl(125deg, 75%, 45%);
+  color: hsl(185deg, 75%, 45%);
   text-decoration: none;
   cursor: pointer;
 }
 a:hover, a:focus {
   text-decoration: underline;
-  color: hsl(125deg, 90%, 55%);
+  color: hsl(185deg, 90%, 55%);
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -208,6 +216,7 @@ h1,
   font-size: 2.5rem;
   margin-top: 0;
   line-height: 1.1em;
+  letter-spacing: 0.05em;
 }
 
 h2,
@@ -247,6 +256,47 @@ h6,
 
 pre {
   font-family: "Anonymous Pro", monospace;
+}
+
+#content {
+  display: grid;
+  grid-column: auto;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#hello {
+  padding: 15%;
+}
+#hello #name {
+  font-family: "Roboto", sans-serif;
+  font-size: 5em;
+  margin: 0;
+}
+#hello #quote {
+  font-size: 1.4rem;
+  font-family: "Times New Roman", Times, serif;
+  color: hsl(185deg, 75%, 45%);
+  margin-top: 1.4rem;
+}
+
+.dock {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 90vh;
+  position: sticky;
+  top: 10vh;
+}
+.dock ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,14 @@
+.dock {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 90vh;
+    position: sticky;
+    top: 10vh;
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+}

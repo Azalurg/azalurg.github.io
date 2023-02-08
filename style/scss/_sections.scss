@@ -10,10 +10,12 @@ section {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    padding: 0 15%;
 }
 
 #hello {
-    padding: 15%;
+    // padding: 15%;
+    // height: 100vh;
 
     #name {
         font-family: $ff-roboto;
@@ -27,4 +29,32 @@ section {
         color: $accent-1;
         margin-top: $fs-h4;
     }
+}
+
+#about{
+    .wrapper{
+        display: grid;
+        grid-template-columns: 60% 40%;
+        column-gap: 1.5rem;
+    }
+   
+    .description{
+        position: relative;
+        top: -3rem;
+        text-align: justify;
+    }
+
+    .avatar-img{
+        position: relative;
+        top: 3rem;
+        // background-image: url("https://avatars.githubusercontent.com/u/91213389?v=4");
+        // background-repeat: no-repeat;
+        // background-size: contain;
+        // border-radius: 1rem;
+        img{
+            width: 80%;
+            border-radius: 1rem;
+        }
+    }
+
 }

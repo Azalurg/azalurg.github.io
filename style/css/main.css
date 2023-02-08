@@ -78,7 +78,7 @@ select {
 .page-wrapper {
   display: grid;
   grid-template-areas: "nav nav nav" "socials content workshop";
-  grid-template-columns: 5% 90% 5%;
+  grid-template-columns: 3% 94% 3%;
 }
 .page-wrapper nav {
   grid-area: nav;
@@ -268,11 +268,9 @@ section {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  padding: 0 15%;
 }
 
-#hello {
-  padding: 15%;
-}
 #hello #name {
   font-family: "Roboto", sans-serif;
   font-size: 5em;
@@ -285,6 +283,25 @@ section {
   margin-top: 1.4rem;
 }
 
+#about .wrapper {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  column-gap: 1.5rem;
+}
+#about .description {
+  position: relative;
+  top: -3rem;
+  text-align: justify;
+}
+#about .avatar-img {
+  position: relative;
+  top: 3rem;
+}
+#about .avatar-img img {
+  width: 80%;
+  border-radius: 1rem;
+}
+
 .dock {
   display: flex;
   align-items: flex-end;
@@ -292,6 +309,7 @@ section {
   height: 90vh;
   position: sticky;
   top: 10vh;
+  font-size: 1.25rem;
 }
 .dock ul {
   list-style: none;

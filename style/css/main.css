@@ -288,18 +288,30 @@ section {
   grid-template-columns: 60% 40%;
   column-gap: 1.5rem;
 }
+#about h2 {
+  position: relative;
+  margin-bottom: 3rem;
+}
 #about .description {
   position: relative;
-  top: -3rem;
+  top: -1.5rem;
   text-align: justify;
 }
 #about .avatar-img {
   position: relative;
-  top: 3rem;
+  top: 1.5rem;
 }
 #about .avatar-img img {
   width: 80%;
   border-radius: 1rem;
+}
+
+#experience h2 {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+#experience div h4, #experience div h6 {
+  margin: 0;
 }
 
 .dock {

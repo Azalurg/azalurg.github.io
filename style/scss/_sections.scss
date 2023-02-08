@@ -37,24 +37,37 @@ section {
         grid-template-columns: 60% 40%;
         column-gap: 1.5rem;
     }
+
+    h2{
+        position: relative;
+        margin-bottom: 3rem;
+    }
    
     .description{
         position: relative;
-        top: -3rem;
+        top: -1.5rem;
         text-align: justify;
     }
 
     .avatar-img{
         position: relative;
-        top: 3rem;
-        // background-image: url("https://avatars.githubusercontent.com/u/91213389?v=4");
-        // background-repeat: no-repeat;
-        // background-size: contain;
-        // border-radius: 1rem;
+        top: 1.5rem;
         img{
             width: 80%;
             border-radius: 1rem;
         }
     }
+}
 
+#experience{
+    h2{
+        position: relative;
+        margin-bottom: 1.5rem;
+    }
+
+    div{
+        h4, h6{
+            margin: 0;
+        }
+    }
 }

@@ -38,20 +38,11 @@ section {
         column-gap: 1.5rem;
     }
 
-    h2{
-        position: relative;
-        margin-bottom: 3rem;
-    }
-   
     .description{
-        position: relative;
-        top: -1.5rem;
         text-align: justify;
     }
 
     .avatar-img{
-        position: relative;
-        top: 1.5rem;
         img{
             width: 80%;
             border-radius: 1rem;
@@ -69,5 +60,19 @@ section {
         h4, h6{
             margin: 0;
         }
+    }
+}
+
+.tag{
+    position: relative;
+    color: $accent-3;
+
+    &.start {
+        
+        top: -1rem;
+    }
+    &.end {
+        position: relative;
+        top: 1rem;
     }
 }

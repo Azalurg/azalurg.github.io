@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Roboto&display=swap");
 *,
 *::before,
 *::after {
@@ -77,7 +78,7 @@ select {
 }
 .page-wrapper {
   display: grid;
-  grid-template-areas: "nav nav nav" "socials content workshop";
+  grid-template-areas: "nav nav nav" "socials content skills";
   grid-template-columns: 3% 94% 3%;
 }
 .page-wrapper nav {
@@ -89,10 +90,14 @@ select {
 .page-wrapper #content {
   grid-area: content;
 }
-.page-wrapper #workshop {
-  grid-area: workshop;
+.page-wrapper #skills {
+  grid-area: skills;
 }
 
+@font-face {
+  font-family: "Anonymice";
+  src: url(https://github.com/Azalurg/dotfiles/blob/main/fonts/Anonymice/Anonymice%20Nerd%20Font%20Complete%20Mono.ttf?raw=true);
+}
 nav {
   display: flex;
   justify-content: space-between;
@@ -184,6 +189,10 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
+@font-face {
+  font-family: "Anonymice";
+  src: url(https://github.com/Azalurg/dotfiles/blob/main/fonts/Anonymice/Anonymice%20Nerd%20Font%20Complete%20Mono.ttf?raw=true);
+}
 body {
   color: hsl(200deg, 0%, 85%);
   background-color: hsl(200deg, 20%, 5%);
@@ -258,6 +267,10 @@ pre {
   font-family: "Anonymous Pro", monospace;
 }
 
+@font-face {
+  font-family: "Anonymice";
+  src: url(https://github.com/Azalurg/dotfiles/blob/main/fonts/Anonymice/Anonymice%20Nerd%20Font%20Complete%20Mono.ttf?raw=true);
+}
 #content {
   display: grid;
   grid-column: auto;
@@ -284,15 +297,20 @@ section {
 }
 
 #about .wrapper {
-  display: grid;
-  grid-template-columns: 60% 40%;
-  column-gap: 1.5rem;
+  display: flex;
+  align-items: center;
 }
-#about .description {
+#about .wrapper .description {
+  width: 60%;
   text-align: justify;
 }
-#about .avatar-img img {
-  width: 80%;
+#about .wrapper .avatar-img {
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+}
+#about .wrapper .avatar-img img {
+  width: 70%;
   border-radius: 1rem;
 }
 
@@ -307,6 +325,7 @@ section {
 .tag {
   position: relative;
   color: hsl(185deg, 100%, 65%);
+  font-family: "Anonymice", monospace;
 }
 .tag.start {
   top: -1rem;
@@ -329,6 +348,28 @@ section {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.dock#skills ul {
+  height: 100%;
+}
+.dock#socials ul {
+  height: 20%;
+}
+
+@font-face {
+  font-family: "Anonymice";
+  src: url(https://github.com/Azalurg/dotfiles/blob/main/fonts/Anonymice/Anonymice%20Nerd%20Font%20Complete%20Mono.ttf?raw=true);
+}
+.anime {
+  transition: 0.1618s;
+}
+
+.anime:hover {
+  transform: scale(116%);
 }
 
 /*# sourceMappingURL=main.css.map */

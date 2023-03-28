@@ -11,5 +11,17 @@
         list-style: none;
         padding: 0;
         margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }    
+
+    &#skills ul{
+        height: 100%;
+    }
+
+    &#socials ul{
+        height: 20%;
     }
 }

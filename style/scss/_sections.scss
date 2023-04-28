@@ -33,19 +33,22 @@ section {
 
 #about{
     .wrapper{
-        display: grid;
-        grid-template-columns: 60% 40%;
-        column-gap: 1.5rem;
-    }
-
-    .description{
-        text-align: justify;
-    }
-
-    .avatar-img{
-        img{
-            width: 80%;
-            border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        
+        .description{
+            width: 60%;
+            text-align: justify;
+        }
+    
+        .avatar-img{
+            width: 40%;
+            display: flex;
+            justify-content: flex-end;
+            img{
+                width: 70%;
+                border-radius: 1rem;
+            }
         }
     }
 }
@@ -66,6 +69,7 @@ section {
 .tag{
     position: relative;
     color: $accent-3;
+    font-family: $ff-anonymice;
 
     &.start {
         

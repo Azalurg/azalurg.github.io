@@ -68,8 +68,8 @@ select {
     scroll-behavior: auto;
   }
   *,
-  *::before,
-  *::after {
+*::before,
+*::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -333,6 +333,15 @@ section {
 .tag.end {
   position: relative;
   top: 1rem;
+}
+
+.background {
+  position: absolute;
+  top: 6rem;
+  width: 100%;
+  min-height: 100vh;
+  z-index: -1;
+  color: hsl(200deg, 20%, 10%);
 }
 
 .dock {

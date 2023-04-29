@@ -73,6 +73,40 @@ section {
     }
 }
 
+#projects{
+    ul{
+        list-style: none;
+        padding: 0 2rem;
+        margin: 0;
+    }
+    li{
+        display: flex;
+        margin-bottom: 4rem;
+        
+        .project-content{
+            width: 64%;
+            z-index: 2;
+        }
+
+        .project-image{
+            width: 64%;
+            z-index: 1;
+            position: relative;
+            
+
+            &.right{
+                right: 10%;
+                top: 4rem;
+            }
+
+            &.left{
+                left: 10%;
+                bottom: 4rem;
+            }
+        }
+    }
+}
+
 .tag{
     position: relative;
     color: $accent-3;

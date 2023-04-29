@@ -16,6 +16,8 @@ section {
 #hello {
     // padding: 15%;
     // height: 100vh;
+    // background-color: $background;
+    // background-clip: border-box;
 
     #name {
         font-family: $ff-roboto;
@@ -39,6 +41,7 @@ section {
         .description{
             width: 60%;
             text-align: justify;
+            line-height: 1.75;
         }
     
         .avatar-img{
@@ -60,9 +63,13 @@ section {
     }
 
     div{
-        h4, h6{
+        h2, h6{
             margin: 0;
         }
+    }
+
+    li{
+        line-height: 1.75;
     }
 }
 
@@ -79,4 +86,16 @@ section {
         position: relative;
         top: 1rem;
     }
+}
+
+#background{
+    position: fixed;
+    justify-content: flex-end;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    color: $background-alt;
+    overflow: hidden;
+
 }

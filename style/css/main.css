@@ -68,8 +68,8 @@ select {
     scroll-behavior: auto;
   }
   *,
-*::before,
-*::after {
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -303,6 +303,7 @@ section {
 #about .wrapper .description {
   width: 60%;
   text-align: justify;
+  line-height: 1.75;
 }
 #about .wrapper .avatar-img {
   width: 40%;
@@ -318,8 +319,11 @@ section {
   position: relative;
   margin-bottom: 1.5rem;
 }
-#experience div h4, #experience div h6 {
+#experience div h2, #experience div h6 {
   margin: 0;
+}
+#experience li {
+  line-height: 1.75;
 }
 
 .tag {
@@ -335,13 +339,15 @@ section {
   top: 1rem;
 }
 
-.background {
-  position: absolute;
-  top: 6rem;
+#background {
+  position: fixed;
+  justify-content: flex-end;
+  bottom: 0;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   z-index: -1;
   color: hsl(200deg, 20%, 10%);
+  overflow: hidden;
 }
 
 .dock {

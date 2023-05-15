@@ -1,25 +1,16 @@
 .page-wrapper {
     display: grid;
     grid-template-areas: 
-        "nav nav nav" 
-        "socials content skills";
-    grid-template-columns: 3% 94% 3%;
+        ". left . right .";
+    grid-template-columns: 2fr 8fr 1fr 11fr 2fr;
     // grid-template-rows: 2rem auto 2rem;
     // grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
 
-    nav {
-        grid-area: nav;
+    .right{
+        grid-area: right;
     }
 
-    #socials {
-        grid-area: socials;
-    }
-
-    #content {
-        grid-area: content;
-    }
-
-    #skills {
-        grid-area: skills;
+    .left{
+        grid-area: left;
     }
 }

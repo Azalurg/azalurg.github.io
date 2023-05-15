@@ -31,7 +31,7 @@ const shuffledLinks = shuffle(links)
 const delay = Math.floor(Math.random() * 100)+10;
 
 // fetch the links and read the text
-function print(link, counter) {
+function print(link, counter, power) {
     fetch(shuffledLinks[link])
         .then(response => response.text())
         .then(text => {
@@ -43,15 +43,15 @@ function print(link, counter) {
 
                 setTimeout(() => {
                     document.querySelector('#background').innerHTML += char;
-                }, delay * (i+counter));
+                }, delay * (i+counter) * power);
             }
             return i
         })
         .then((i) =>{
             if(link > 0){
-                print(link - 1, i+counter)
+                print(link - 1, power == 0 ? 1 : i+counter, 1)
             }
         })
 }
 
-print(shuffledLinks.length-1, 0)
+print(shuffledLinks.length-1, 0, 0)

@@ -1,35 +1,41 @@
 @use "abstracts" as *;
 
-#content {
-    display: grid;
-    grid-column: auto;
-}
+// SECTIONS: 
+// - hello
+// - navigation
+// - contact
+
+// - about
+// - experience
+// - projects
+
+// - background
 
 section {
-    height: 100vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding: 0 15%;
+    padding: 10% 0;
 }
 
 #hello {
-    // padding: 15%;
-    // height: 100vh;
-    // background-color: $background;
-    // background-clip: border-box;
+    position: sticky;
+    top: 0;
 
     #name {
         font-family: $ff-roboto;
-        font-size: 5em;
         margin: 0;
     }
 
+    #title{
+        font-family: $ff-roboto;
+    }
+
     #quote {
-        font-size: $fs-h4;
-        font-family: $ff-headers;
+        font-weight: 100;
         color: $accent-1;
-        margin-top: $fs-h4;
+        margin-top: $fs-h5;
+        font-family: 'Times New Roman', Times, serif;
     }
 }
 
@@ -39,20 +45,20 @@ section {
         align-items: center;
         
         .description{
-            width: 60%;
+            width: 100%;
             text-align: justify;
-            line-height: 1.75;
+            // line-height: 1.25;
         }
     
-        .avatar-img{
-            width: 40%;
-            display: flex;
-            justify-content: flex-end;
-            img{
-                width: 70%;
-                border-radius: 1rem;
-            }
-        }
+        // .avatar-img{
+        //     width: 40%;
+        //     display: flex;
+        //     justify-content: flex-end;
+        //     img{
+        //         width: 70%;
+        //         border-radius: 1rem;
+        //     }
+        // }
     }
 }
 
@@ -63,8 +69,11 @@ section {
     }
 
     div{
-        h2, h6{
+        h3, h6{
             margin: 0;
+        }
+        h6{
+            font-family: 'Times New Roman', Times, serif;
         }
     }
 
@@ -110,7 +119,8 @@ section {
 .tag{
     position: relative;
     color: $accent-3;
-    font-family: $ff-anonymice;
+    font-family: $ff-anonymous;
+    right: 1rem;
 
     &.start {
         
@@ -131,5 +141,6 @@ section {
     z-index: -1;
     color: $background-alt;
     overflow: hidden;
-
+    padding: 0;
+    margin-left: calc(100%/24*5);
 }

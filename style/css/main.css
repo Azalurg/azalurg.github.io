@@ -3,7 +3,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Roboto&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Roboto&display=swap");
 *,
 *::before,
 *::after {
@@ -78,115 +77,14 @@ select {
 }
 .page-wrapper {
   display: grid;
-  grid-template-areas: "nav nav nav" "socials content skills";
-  grid-template-columns: 3% 94% 3%;
+  grid-template-areas: ". left . right .";
+  grid-template-columns: 2fr 8fr 1fr 11fr 2fr;
 }
-.page-wrapper nav {
-  grid-area: nav;
+.page-wrapper .right {
+  grid-area: right;
 }
-.page-wrapper #socials {
-  grid-area: socials;
-}
-.page-wrapper #content {
-  grid-area: content;
-}
-.page-wrapper #skills {
-  grid-area: skills;
-}
-
-@font-face {
-  font-family: "Anonymice";
-  src: url(https://github.com/Azalurg/dotfiles/blob/main/fonts/Anonymice/Anonymice%20Nerd%20Font%20Complete%20Mono.ttf?raw=true);
-}
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0;
-  padding: 1rem 4rem;
-  z-index: 11;
-  position: sticky;
-  top: 0;
-  font-size: 1.1rem;
-  background-color: hsl(200deg, 20%, 5%);
-}
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-nav ul:nth-of-type(2) {
-  width: 100%;
-  max-width: 420px;
-  justify-content: space-evenly;
-}
-nav img {
-  height: 4rem;
-  width: 4rem;
-}
-
-/* The switch - the box around the slider */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 3rem;
-  height: 1.5rem;
-}
-
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-/* The slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 1rem;
-  width: 1rem;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-input:checked + .slider {
-  background-color: #2196F3;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 1.5rem;
-}
-
-.slider.round:before {
-  border-radius: 50%;
+.page-wrapper .left {
+  grid-area: left;
 }
 
 @font-face {
@@ -216,7 +114,7 @@ a:hover, a:focus {
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Roboto", sans-serif;
   margin-bottom: 0.25em;
 }
 
@@ -271,29 +169,29 @@ pre {
   font-family: "Anonymice";
   src: url(https://github.com/Azalurg/dotfiles/blob/main/fonts/Anonymice/Anonymice%20Nerd%20Font%20Complete%20Mono.ttf?raw=true);
 }
-#content {
-  display: grid;
-  grid-column: auto;
-}
-
 section {
-  height: 100vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 0 15%;
+  padding: 10% 0;
 }
 
+#hello {
+  position: sticky;
+  top: 0;
+}
 #hello #name {
   font-family: "Roboto", sans-serif;
-  font-size: 5em;
   margin: 0;
 }
+#hello #title {
+  font-family: "Roboto", sans-serif;
+}
 #hello #quote {
-  font-size: 1.4rem;
-  font-family: "Times New Roman", Times, serif;
+  font-weight: 100;
   color: hsl(185deg, 75%, 45%);
-  margin-top: 1.4rem;
+  margin-top: 1.1rem;
+  font-family: "Times New Roman", Times, serif;
 }
 
 #about .wrapper {
@@ -301,26 +199,19 @@ section {
   align-items: center;
 }
 #about .wrapper .description {
-  width: 60%;
+  width: 100%;
   text-align: justify;
-  line-height: 1.75;
-}
-#about .wrapper .avatar-img {
-  width: 40%;
-  display: flex;
-  justify-content: flex-end;
-}
-#about .wrapper .avatar-img img {
-  width: 70%;
-  border-radius: 1rem;
 }
 
 #experience h2 {
   position: relative;
   margin-bottom: 1.5rem;
 }
-#experience div h2, #experience div h6 {
+#experience div h3, #experience div h6 {
   margin: 0;
+}
+#experience div h6 {
+  font-family: "Times New Roman", Times, serif;
 }
 #experience li {
   line-height: 1.75;
@@ -356,7 +247,8 @@ section {
 .tag {
   position: relative;
   color: hsl(185deg, 100%, 65%);
-  font-family: "Anonymice", monospace;
+  font-family: "Anonymous Pro", monospace;
+  right: 1rem;
 }
 .tag.start {
   top: -1rem;
@@ -375,31 +267,8 @@ section {
   z-index: -1;
   color: hsl(200deg, 20%, 10%);
   overflow: hidden;
-}
-
-.dock {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  height: 90vh;
-  position: sticky;
-  top: 10vh;
-  font-size: 1.25rem;
-}
-.dock ul {
-  list-style: none;
   padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-}
-.dock#skills ul {
-  height: 100%;
-}
-.dock#socials ul {
-  height: 20%;
+  margin-left: 20.8333333333%;
 }
 
 @font-face {

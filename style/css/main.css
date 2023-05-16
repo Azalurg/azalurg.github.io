@@ -67,8 +67,8 @@ select {
     scroll-behavior: auto;
   }
   *,
-  *::before,
-  *::after {
+*::before,
+*::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -207,7 +207,8 @@ section {
   position: relative;
   margin-bottom: 1.5rem;
 }
-#experience div h3, #experience div h6 {
+#experience div h3,
+#experience div h6 {
   margin: 0;
 }
 #experience div h6 {
@@ -219,29 +220,25 @@ section {
 
 #projects ul {
   list-style: none;
-  padding: 0 2rem;
   margin: 0;
+  padding: 0;
 }
-#projects li {
+#projects ul li {
   display: flex;
-  margin-bottom: 4rem;
+  flex-direction: column;
+  align-items: center;
 }
-#projects li .project-content {
-  width: 64%;
-  z-index: 2;
+#projects .baner {
+  width: 16rem;
+  height: 9rem;
 }
-#projects li .project-image {
-  width: 64%;
-  z-index: 1;
+#projects .baner .visible {
   position: relative;
+  top: 50%;
 }
-#projects li .project-image.right {
-  right: 10%;
-  top: 4rem;
-}
-#projects li .project-image.left {
-  left: 10%;
-  bottom: 4rem;
+#projects .baner .hover {
+  display: none;
+  position: relative;
 }
 
 .tag {

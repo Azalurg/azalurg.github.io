@@ -85,11 +85,12 @@ section {
             display: flex;
             flex-direction: column;
             align-items: center;
+            padding: 2rem 0;
         }
     }
 
-    .baner {
-        width: 76%;
+    .banner {
+        width: 66%;
         aspect-ratio: 16/9;
         background-position: center;
         background-size: cover;
@@ -100,27 +101,36 @@ section {
         border-radius: 0.5rem;
         transition: all 0.8s ease;
 
-        .visible {
-            display: block;
+        .visible,
+        .hover {
             background-color: hsla(172, 66%, 7%, 0.495);
             z-index: 2;
             width: 100%;
             height: 100%;
+            margin: 0;
+            transition: all 0.8s ease;
+        }
+
+        .visible {
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 0;
-            
         }
 
         .hover {
             display: none;
-            transition: all 0.8s ease;
+            
 
+            a {
+                font-size: $fs-h2;
+                color: $foreground;
+                padding: 1rem 0;
+            }
         }
 
         &:hover {
             box-shadow: 1rem 1rem 3rem 2rem #1c1c1c;
+            width: 72%;
             .visible {
                 display: none;
             }
@@ -128,7 +138,8 @@ section {
             .hover {
                 display: flex;
                 flex-direction: column;
-                font-size: $fs-h3;
+                justify-content: center;
+                align-items: center;
             }
         }
     }

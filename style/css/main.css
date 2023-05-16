@@ -162,7 +162,7 @@ h6,
 }
 
 pre {
-  font-family: "Anonymous Pro", monospace;
+  font-family: "Anonymice", monospace;
 }
 
 @font-face {
@@ -229,22 +229,60 @@ section {
   align-items: center;
 }
 #projects .baner {
-  width: 16rem;
-  height: 9rem;
+  width: 76%;
+  aspect-ratio: 16/9;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  transition: all 0.8s ease;
 }
 #projects .baner .visible {
-  position: relative;
-  top: 50%;
+  display: block;
+  background-color: hsla(172deg, 66%, 7%, 0.495);
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
 }
 #projects .baner .hover {
   display: none;
-  position: relative;
+  transition: all 0.8s ease;
+}
+#projects .baner:hover {
+  box-shadow: 1rem 1rem 3rem 2rem #1c1c1c;
+}
+#projects .baner:hover .visible {
+  display: none;
+}
+#projects .baner:hover .hover {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.65rem;
+}
+#projects .topics {
+  display: flex;
+}
+#projects .topics li {
+  display: block;
+  background-color: hsla(185deg, 100%, 50%, 0.5);
+  border-radius: 1rem;
+  padding: 0.25rem 0.75rem;
+  margin: 0.75rem 0.25rem;
+  font-size: 0.9rem;
+  font-family: "Anonymice", monospace;
 }
 
 .tag {
   position: relative;
   color: hsl(185deg, 100%, 65%);
-  font-family: "Anonymous Pro", monospace;
+  font-family: "Anonymice", monospace;
   right: 1rem;
 }
 .tag.start {

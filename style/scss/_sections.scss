@@ -1,0 +1,191 @@
+@use "abstracts" as *;
+
+// SECTIONS:
+// - hello
+// - navigation
+// - contact
+
+// - about
+// - experience
+// - projects
+
+// - background
+
+section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10% 0;
+}
+
+#hello {
+    position: sticky;
+    top: 0;
+
+    #name {
+        font-family: $ff-roboto;
+        margin: 0;
+    }
+
+    #title {
+        font-family: $ff-roboto;
+    }
+
+    #quote {
+        font-weight: 100;
+        color: $accent-1;
+        margin-top: $fs-h5;
+        font-family: "Times New Roman", Times, serif;
+    }
+}
+
+#about {
+    .wrapper {
+        display: flex;
+        align-items: center;
+
+        .description {
+            width: 100%;
+            text-align: justify;
+            // line-height: 1.25;
+        }
+    }
+}
+
+#experience {
+    h2 {
+        position: relative;
+        margin-bottom: 1.5rem;
+    }
+
+    div {
+
+        h3,
+        h6 {
+            margin: 0;
+        }
+
+        h6 {
+            font-family: "Times New Roman", Times, serif;
+        }
+    }
+
+    li {
+        line-height: 1.75;
+    }
+}
+
+#projects {
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 0;
+        }
+    }
+
+    .banner {
+        width: 66%;
+        aspect-ratio: 16/9;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0.5rem;
+        transition: all 0.8s ease;
+
+        .visible,
+        .hover {
+            background-color: hsla(172, 66%, 7%, 0.495);
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            transition: all 0.8s ease;
+        }
+
+        .visible {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hover {
+            display: none;
+            
+
+            a {
+                font-size: $fs-h2;
+                color: $foreground;
+                padding: 1rem 0;
+            }
+        }
+
+        &:hover {
+            box-shadow: 1rem 1rem 3rem 2rem #1c1c1c;
+            width: 72%;
+            .visible {
+                display: none;
+            }
+
+            .hover {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+
+    .topics {
+        display: flex;
+
+        li {
+            display: block;
+            background-color: hsla(185, 100%, 50%, 0.5);
+            border-radius: 1rem;
+            padding: 0.25rem 0.75rem;
+            margin: 0.75rem 0.25rem;
+            font-size: $fs-h6;
+            font-family: $ff-anonymice;
+        }
+
+    }
+
+}
+
+.tag {
+    position: relative;
+    color: $accent-3;
+    font-family: $ff-anonymice;
+    right: 1rem;
+
+    &.start {
+        top: -1rem;
+    }
+
+    &.end {
+        position: relative;
+        top: 1rem;
+    }
+}
+
+#background {
+    position: fixed;
+    justify-content: flex-end;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    color: $background-alt;
+    overflow: hidden;
+    padding: 0;
+    margin-left: calc(100% / 24 * 5);
+}

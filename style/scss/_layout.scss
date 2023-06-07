@@ -1,0 +1,16 @@
+.page-wrapper {
+    display: grid;
+    grid-template-areas: 
+        ". left . right .";
+    grid-template-columns: 2fr 8fr 1fr 11fr 2fr;
+    // grid-template-rows: 2rem auto 2rem;
+    // grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+
+    .right{
+        grid-area: right;
+    }
+
+    .left{
+        grid-area: left;
+    }
+}

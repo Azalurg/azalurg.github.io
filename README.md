@@ -1,5 +1,11 @@
 # My CV
 
-In a few days, I start my first job so I decided to refresh my CV a little bit.
+v 3.1.0
 
-v 2.1
+## Inspirations
+
+Here are portfolios I took inspiration from. Im not good at deign but those ones are amazing.
+
+- [Brittany Chiang](https://brittanychiang.com/)
+- [CORY HUGHART](https://coryhughart.com/)
+- [CHASE OHLSON](https://chaseohlson.com/)

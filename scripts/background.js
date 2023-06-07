@@ -3,7 +3,10 @@ const links = [
     'https://raw.githubusercontent.com/Azalurg/homepage/main/script/weather.js',
     'https://raw.githubusercontent.com/Azalurg/Crypta/master/src/tools/vigenereBeispiel.py',
     'https://raw.githubusercontent.com/Azalurg/yt-mp3/main/script.py',
-    'https://raw.githubusercontent.com/Azalurg-Uni-Projects/003-java-freeMarket/main/Market/game/Game.java'
+    'https://raw.githubusercontent.com/Azalurg-Uni-Projects/003-java-freeMarket/main/Market/game/Game.java',
+    'https://raw.githubusercontent.com/Azalurg/zoo-manager/master/src/main/java/com/github/azalurg/zoomanager/custom/RandomId.java',
+    'https://raw.githubusercontent.com/Azalurg/rust_playground/master/guessing_game/src/main.rs',
+    'https://raw.githubusercontent.com/Azalurg-Uni-Projects/labs-optymalizacja-kombinatoryczna/master/lab08/main.py'
 ];
 
 let word_speed = 100;
@@ -26,10 +29,10 @@ function max(a, b) {
 };
 
 function delay(char) {
-    if (char == ' '){
+    if (char == ' ') {
         word_speed = Math.floor(Math.random() * 50) + 10;
         return 150;
-    } 
+    }
     word_speed += 1;
     return max(word_speed, 100);
 };

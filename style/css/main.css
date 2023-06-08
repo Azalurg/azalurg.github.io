@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Roboto&display=swap");
 *,
 *::before,
 *::after {
@@ -67,8 +68,8 @@ select {
     scroll-behavior: auto;
   }
   *,
-  *::before,
-  *::after {
+*::before,
+*::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -85,12 +86,14 @@ select {
 }
 .page-wrapper .left {
   grid-area: left;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-@font-face {
-  font-family: "Anonymice";
-  src: url(https://github.com/Azalurg/dotfiles/blob/main/fonts/Anonymice/Anonymice%20Nerd%20Font%20Complete%20Mono.ttf?raw=true);
-}
 body {
   color: hsl(200deg, 0%, 85%);
   background-color: hsl(200deg, 20%, 5%);
@@ -103,13 +106,24 @@ body {
 }
 
 a {
-  color: hsl(185deg, 75%, 45%);
   text-decoration: none;
   cursor: pointer;
+  color: hsl(199deg, 15%, 30%);
+  transition: all 0.3236s linear;
+  display: inline;
+  text-decoration: none;
+  background: linear-gradient(to right, hsl(185deg, 75%, 45%) 0%, hsl(185deg, 100%, 65%) 98%);
+  background-size: 0px 2px;
+  background-repeat: no-repeat;
+  background-position: left 85%;
+  text-shadow: 0;
 }
-a:hover, a:focus {
-  text-decoration: underline;
-  color: hsl(185deg, 90%, 55%);
+a:hover {
+  color: hsl(185deg, 75%, 45%);
+}
+a:hover {
+  background-size: 100% 2px;
+  text-shadow: 0 2.5px 4px rgba(0, 0, 0, 0.5);
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -165,10 +179,6 @@ pre {
   font-family: "Anonymice", monospace;
 }
 
-@font-face {
-  font-family: "Anonymice";
-  src: url(https://github.com/Azalurg/dotfiles/blob/main/fonts/Anonymice/Anonymice%20Nerd%20Font%20Complete%20Mono.ttf?raw=true);
-}
 section {
   display: flex;
   justify-content: center;
@@ -176,10 +186,6 @@ section {
   padding: 10% 0;
 }
 
-#hello {
-  position: sticky;
-  top: 0;
-}
 #hello #name {
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -189,9 +195,33 @@ section {
 }
 #hello #quote {
   font-weight: 100;
-  color: hsl(185deg, 75%, 45%);
+  color: hsl(185deg, 90%, 55%);
   margin-top: 1.1rem;
   font-family: "Times New Roman", Times, serif;
+}
+
+#navigation {
+  padding-top: 2rem;
+}
+#navigation h4 {
+  margin: 0;
+}
+#navigation ul {
+  margin: 0;
+}
+#navigation ul li {
+  line-height: 1.75;
+  font-size: 1.1rem;
+}
+#navigation ul li::marker {
+  color: hsl(199deg, 15%, 30%);
+  content: "+   ";
+}
+#navigation ul li a {
+  color: hsl(199deg, 15%, 30%);
+}
+#navigation ul li a:hover {
+  color: hsl(185deg, 75%, 45%);
 }
 
 #about .wrapper {
@@ -263,6 +293,9 @@ section {
   color: hsl(200deg, 0%, 85%);
   padding: 1rem 0;
 }
+#projects .banner .hover a:hover {
+  color: hsl(185deg, 75%, 45%);
+}
 #projects .banner:hover {
   box-shadow: 1rem 1rem 3rem 2rem #1c1c1c;
   width: 72%;
@@ -316,12 +349,8 @@ section {
   margin-left: 20.8333333333%;
 }
 
-@font-face {
-  font-family: "Anonymice";
-  src: url(https://github.com/Azalurg/dotfiles/blob/main/fonts/Anonymice/Anonymice%20Nerd%20Font%20Complete%20Mono.ttf?raw=true);
-}
 .anime {
-  transition: 0.1618s;
+  transition: 0.1618s ease;
 }
 
 .anime:hover {

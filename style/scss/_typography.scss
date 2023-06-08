@@ -1,4 +1,5 @@
 @use "abstracts" as *;
+@use "mixins" as *;
 
 body {
   color: $foreground;
@@ -12,13 +13,18 @@ body {
 }
 
 a {
-  color: $accent-1;
+  // color: $accent-1;
   text-decoration: none;
   cursor: pointer;
-  &:hover, &:focus{
-    text-decoration: underline;
-    color: $accent-2;
+  color: $gray-3;
+  &:hover{
+      color: $accent-1;
   }
+  @include underline;
+  // &:hover, &:focus{
+  //   text-decoration: overline underline;
+  //   color: $accent-2;
+  // }
 }
 
 h1, h2, h3, h4, h5, h6, 

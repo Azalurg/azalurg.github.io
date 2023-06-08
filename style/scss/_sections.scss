@@ -19,9 +19,6 @@ section {
 }
 
 #hello {
-    position: sticky;
-    top: 0;
-
     #name {
         font-family: $ff-roboto;
         margin: 0;
@@ -33,9 +30,34 @@ section {
 
     #quote {
         font-weight: 100;
-        color: $accent-1;
+        color: $accent-2;
         margin-top: $fs-h5;
         font-family: "Times New Roman", Times, serif;
+    }
+}
+
+#navigation {
+    padding-top: 2rem;
+    h4{
+        margin: 0;
+    }
+    ul{
+        margin: 0;
+        li {
+            line-height: 1.75;
+            font-size: $fs-h5;
+            &::marker {
+                color: $gray-3;
+                content: '+   ';
+            }
+
+            a{
+                color: $gray-3;
+                &:hover{
+                    color: $accent-1;
+                }
+            }
+        }
     }
 }
 
@@ -125,6 +147,9 @@ section {
                 font-size: $fs-h2;
                 color: $foreground;
                 padding: 1rem 0;
+                &:hover{
+                    color: $accent-1;
+                }
             }
         }
 

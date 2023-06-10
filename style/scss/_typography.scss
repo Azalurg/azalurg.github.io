@@ -13,14 +13,14 @@ body {
 }
 
 a {
-  // color: $accent-1;
   text-decoration: none;
   cursor: pointer;
   color: $gray-3;
   &:hover{
-      color: $accent-1;
+      color: $accent-3;
   }
-  @include underline;
+  // @include underline;
+  // color: $accent-1;
   // &:hover, &:focus{
   //   text-decoration: overline underline;
   //   color: $accent-2;

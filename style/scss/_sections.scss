@@ -1,4 +1,5 @@
 @use "abstracts" as *;
+@use "mixins" as *;
 
 // SECTIONS:
 // - hello
@@ -38,27 +39,51 @@ section {
 
 #navigation {
     padding-top: 2rem;
-    h4{
+
+    h4 {
         margin: 0;
     }
-    ul{
+
+    ul {
         margin: 0;
+
         li {
             line-height: 1.75;
             font-size: $fs-h5;
+
             &::marker {
-                color: $gray-3;
+                color: $foreground;
                 content: '+   ';
             }
 
-            a{
-                color: $gray-3;
-                &:hover{
-                    color: $accent-1;
+            a {
+                @include underline(2px);
+                color: $foreground;
+
+                &:hover {
+                    color: $accent-3;
                 }
             }
         }
     }
+}
+
+#contact {
+    display: flex;
+    width: 100%;
+    font-size: $fs-h2;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    a {
+        padding-right: 1rem;
+        color: $gray-3;
+        &:hover {
+            color: $foreground;
+        }
+    }
+
 }
 
 #about {
@@ -80,20 +105,26 @@ section {
         margin-bottom: 1.5rem;
     }
 
-    div {
+    .job {
+        h3 {
+            margin: 0;
 
-        h3,
+            a {
+                color: $accent-1;
+                &:hover {
+                    color: $accent-3;
+                }
+            }
+        }
+
         h6 {
             margin: 0;
-        }
-
-        h6 {
             font-family: "Times New Roman", Times, serif;
         }
-    }
 
-    li {
-        line-height: 1.75;
+        li {
+            line-height: 1.75;
+        }
     }
 }
 
@@ -141,21 +172,20 @@ section {
 
         .hover {
             display: none;
-            
+
 
             a {
                 font-size: $fs-h2;
                 color: $foreground;
                 padding: 1rem 0;
-                &:hover{
-                    color: $accent-1;
-                }
+                @include underline(4px);
             }
         }
 
         &:hover {
             box-shadow: 1rem 1rem 3rem 2rem #1c1c1c;
             width: 72%;
+
             .visible {
                 display: none;
             }

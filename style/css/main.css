@@ -109,21 +109,9 @@ a {
   text-decoration: none;
   cursor: pointer;
   color: hsl(199deg, 15%, 30%);
-  transition: all 0.3236s linear;
-  display: inline;
-  text-decoration: none;
-  background: linear-gradient(to right, hsl(185deg, 75%, 45%) 0%, hsl(185deg, 100%, 65%) 98%);
-  background-size: 0px 2px;
-  background-repeat: no-repeat;
-  background-position: left 85%;
-  text-shadow: 0;
 }
 a:hover {
-  color: hsl(185deg, 75%, 45%);
-}
-a:hover {
-  background-size: 100% 2px;
-  text-shadow: 0 2.5px 4px rgba(0, 0, 0, 0.5);
+  color: hsl(185deg, 100%, 65%);
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -214,14 +202,42 @@ section {
   font-size: 1.1rem;
 }
 #navigation ul li::marker {
-  color: hsl(199deg, 15%, 30%);
+  color: hsl(200deg, 0%, 85%);
   content: "+   ";
 }
 #navigation ul li a {
-  color: hsl(199deg, 15%, 30%);
+  transition: all 0.3236s linear;
+  display: inline;
+  text-decoration: none;
+  background: linear-gradient(to right, hsl(185deg, 75%, 45%) 0%, hsl(185deg, 100%, 65%) 98%);
+  background-size: 0px 2px;
+  background-repeat: no-repeat;
+  background-position: left 85%;
+  text-shadow: 0;
+  color: hsl(200deg, 0%, 85%);
 }
 #navigation ul li a:hover {
-  color: hsl(185deg, 75%, 45%);
+  background-size: 100% 2px;
+  text-shadow: 0 2.5px 4px rgba(0, 0, 0, 0.5);
+}
+#navigation ul li a:hover {
+  color: hsl(185deg, 100%, 65%);
+}
+
+#contact {
+  display: flex;
+  width: 100%;
+  font-size: 2rem;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+#contact a {
+  padding-right: 1rem;
+  color: hsl(199deg, 15%, 30%);
+}
+#contact a:hover {
+  color: hsl(200deg, 0%, 85%);
 }
 
 #about .wrapper {
@@ -237,14 +253,20 @@ section {
   position: relative;
   margin-bottom: 1.5rem;
 }
-#experience div h3,
-#experience div h6 {
+#experience .job h3 {
   margin: 0;
 }
-#experience div h6 {
+#experience .job h3 a {
+  color: hsl(185deg, 75%, 45%);
+}
+#experience .job h3 a:hover {
+  color: hsl(185deg, 100%, 65%);
+}
+#experience .job h6 {
+  margin: 0;
   font-family: "Times New Roman", Times, serif;
 }
-#experience li {
+#experience .job li {
   line-height: 1.75;
 }
 
@@ -292,9 +314,18 @@ section {
   font-size: 2rem;
   color: hsl(200deg, 0%, 85%);
   padding: 1rem 0;
+  transition: all 0.3236s linear;
+  display: inline;
+  text-decoration: none;
+  background: linear-gradient(to right, hsl(185deg, 75%, 45%) 0%, hsl(185deg, 100%, 65%) 98%);
+  background-size: 0px 4px;
+  background-repeat: no-repeat;
+  background-position: left 85%;
+  text-shadow: 0;
 }
 #projects .banner .hover a:hover {
-  color: hsl(185deg, 75%, 45%);
+  background-size: 100% 4px;
+  text-shadow: 0 2.5px 4px rgba(0, 0, 0, 0.5);
 }
 #projects .banner:hover {
   box-shadow: 1rem 1rem 3rem 2rem #1c1c1c;

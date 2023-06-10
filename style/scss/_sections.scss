@@ -79,6 +79,7 @@ section {
     a {
         padding-right: 1rem;
         color: $gray-3;
+
         &:hover {
             color: $foreground;
         }
@@ -111,6 +112,7 @@ section {
 
             a {
                 color: $accent-1;
+
                 &:hover {
                     color: $accent-3;
                 }

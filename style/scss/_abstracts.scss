@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Roboto&display=swap');
 
-@font-face {
-    font-family: 'Anonymice';
-    src: url(https://github.com/Azalurg/dotfiles/blob/main/fonts/Anonymice/Anonymice%20Nerd%20Font%20Complete%20Mono.ttf?raw=true);
-}
-
 $background: hsl(200, 20%, 5%);
 $background-alt: hsl(200, 20%, 10%);
 
@@ -43,3 +38,5 @@ $fs-h3: 1.65rem;
 $fs-h4: 1.4rem;
 $fs-h5: 1.1rem;
 $fs-h6:  0.9rem;
+
+$time: 0.1618s;

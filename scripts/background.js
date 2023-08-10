@@ -5,8 +5,9 @@ const links = [
     'https://raw.githubusercontent.com/Azalurg/yt-mp3/main/script.py',
     'https://raw.githubusercontent.com/Azalurg-Uni-Projects/003-java-freeMarket/main/Market/game/Game.java',
     'https://raw.githubusercontent.com/Azalurg/zoo-manager/master/src/main/java/com/github/azalurg/zoomanager/custom/RandomId.java',
-    'https://raw.githubusercontent.com/Azalurg/rust_playground/master/guessing_game/src/main.rs',
-    'https://raw.githubusercontent.com/Azalurg-Uni-Projects/labs-optymalizacja-kombinatoryczna/master/lab08/main.py'
+    'https://raw.githubusercontent.com/Azalurg/rust_playground/master/book/guessing_game/src/main.rs',
+    'https://raw.githubusercontent.com/Azalurg-Uni-Projects/labs-optymalizacja-kombinatoryczna/master/lab08/main.py',
+    'https://raw.githubusercontent.com/Azalurg/rust_playground/master/game/character/src/main.rs'
 ];
 
 let word_speed = 100;

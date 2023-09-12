@@ -1,5 +1,5 @@
-@use "abstracts" as *;
-@use "mixins" as *;
+@use 'abstracts' as *;
+@use 'mixins' as *;
 
 // SECTIONS:
 // - hello
@@ -8,6 +8,7 @@
 
 // - about
 // - experience
+// - education
 // - projects
 
 // - background
@@ -33,7 +34,7 @@ section {
         font-weight: 100;
         color: $accent-2;
         margin-top: $fs-h5;
-        font-family: "Times New Roman", Times, serif;
+        font-family: 'Times New Roman', Times, serif;
     }
 }
 
@@ -84,7 +85,6 @@ section {
             color: $foreground;
         }
     }
-
 }
 
 #about {
@@ -100,33 +100,33 @@ section {
     }
 }
 
-#experience {
-    h2 {
-        position: relative;
-        margin-bottom: 1.5rem;
-    }
+#experience,
+#education {
+    h3 {
+        margin: 0;
 
-    .job {
-        h3 {
-            margin: 0;
+        a {
+            color: $accent-1;
 
-            a {
-                color: $accent-1;
-
-                &:hover {
-                    color: $accent-3;
-                }
+            &:hover {
+                color: $accent-3;
             }
         }
+    }
 
-        h6 {
-            margin: 0;
-            font-family: "Times New Roman", Times, serif;
-        }
+    h6 {
+        margin: 0;
+        font-family: 'Times New Roman', Times, serif;
+    }
 
-        li {
-            line-height: 1.75;
-        }
+    li {
+        line-height: 1.75;
+    }
+
+    .description {
+        margin-top: 1em;
+        margin-bottom: 1em;
+        padding-left: 40px;
     }
 }
 
@@ -175,7 +175,6 @@ section {
         .hover {
             display: none;
 
-
             a {
                 font-size: $fs-h2;
                 color: $foreground;
@@ -213,9 +212,7 @@ section {
             font-size: $fs-h6;
             font-family: $ff-anonymice;
         }
-
     }
-
 }
 
 .tag {

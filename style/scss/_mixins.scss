@@ -1,7 +1,7 @@
-@use "abstracts" as *;
+@use 'abstracts' as *;
 
 @mixin underline($bg-size) {
-    transition: all calc($time*2) linear;
+    transition: all calc($time * 2) linear;
     display: inline;
     text-decoration: none;
     background: linear-gradient(to right, $accent-1 0%, $accent-3 98%);
@@ -17,8 +17,9 @@
 }
 
 @mixin block {
-    transition: background-size calc($time*3.1415) ease;
-    background: linear-gradient(to bottom, transparent 64%, $accent-alt-2 0) right center/0% 72% no-repeat;
+    transition: background-size calc($time * 3.1415) ease;
+    background: linear-gradient(to bottom, transparent 64%, $accent-alt-2 0)
+        right center/0% 72% no-repeat;
     cursor: pointer;
 
     &:hover {

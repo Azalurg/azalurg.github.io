@@ -1,0 +1,16 @@
+{
+    "liveSassCompile.settings.forceBaseDirectory": "/style/scss",
+    "liveSassCompile.settings.formats": [
+
+        {
+            "format": "compressed",
+            "extensionName": ".mini.css",
+            "savePath": "/style/css",
+            "savePathReplacementPairs": null
+        }
+    ],
+    "liveSassCompile.settings.generateMap": false,
+    "liveSassCompile.settings.watchOnLaunch": true,
+    "editor.formatOnPaste": false,
+    "prettier.requireConfig": false
+}

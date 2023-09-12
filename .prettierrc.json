@@ -1,0 +1,20 @@
+{
+  "overrides": [
+    {
+      "files": "*.scss",
+      "options": {
+        "singleQuote": true,
+        "tabWidth": 4,
+        "semi": true,
+        "--": "proseWrap-keep" 
+      }
+    },
+    {
+      "files": "*.html",
+      "options": {
+        "printWidth": 100,
+        "tabWidth": 2
+      }
+    }
+  ]
+}

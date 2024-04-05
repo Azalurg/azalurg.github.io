@@ -7,7 +7,11 @@ const links = [
     'https://raw.githubusercontent.com/Azalurg/zoo-manager/master/src/main/java/com/github/azalurg/zoomanager/custom/RandomId.java',
     'https://raw.githubusercontent.com/Azalurg/rust_playground/master/book/guessing_game/src/main.rs',
     'https://raw.githubusercontent.com/Azalurg-Uni-Projects/labs-optymalizacja-kombinatoryczna/master/lab08/main.py',
-    'https://raw.githubusercontent.com/Azalurg/rust_playground/master/game/character/src/main.rs'
+    'https://raw.githubusercontent.com/Azalurg/rust_playground/master/game/character/src/main.rs',
+    'https://raw.githubusercontent.com/Azalurg/LibraAlchemy/master/src/scanner.rs',
+    'https://raw.githubusercontent.com/Azalurg/Data-Science-and-ML/master/real_time_virtualization/03_K-Nearest_Neighbors.py',
+    'https://github.com/Azalurg/yt-mp3/blob/main/main.py',
+    'https://raw.githubusercontent.com/Azalurg/EchoTimer/master/script.js'
 ];
 
 let word_speed = 100;
@@ -24,18 +28,18 @@ function get_text(link) {
     return fetch(link).then(response => response.text());
 };
 
-function max(a, b) {
-    if (a > b) return a;
+function min(a, b) {
+    if (a < b) return a;
     return b;
 };
 
 function delay(char) {
     if (char == ' ') {
         word_speed = Math.floor(Math.random() * 50) + 10;
-        return 150;
+        return word_speed;
     }
-    word_speed += 1;
-    return max(word_speed, 100);
+    word_speed = min(word_speed + 2, 100);
+    return word_speed;
 };
 
 function print(text, index, callback) {

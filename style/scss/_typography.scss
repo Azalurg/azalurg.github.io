@@ -14,8 +14,10 @@ body {
 
 a {
     text-decoration: none;
+    // font-weight: 600;
+    letter-spacing: 1px;
     cursor: pointer;
-    color: $gray-3;
+    color: $accent-1;
     &:hover {
         color: $accent-3;
     }

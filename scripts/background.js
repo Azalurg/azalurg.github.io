@@ -11,7 +11,10 @@ const links = [
     'https://raw.githubusercontent.com/Azalurg/LibraAlchemy/master/src/scanner.rs',
     'https://raw.githubusercontent.com/Azalurg/Data-Science-and-ML/master/real_time_virtualization/03_K-Nearest_Neighbors.py',
     'https://github.com/Azalurg/yt-mp3/blob/main/main.py',
-    'https://raw.githubusercontent.com/Azalurg/EchoTimer/master/script.js'
+    'https://raw.githubusercontent.com/Azalurg/EchoTimer/master/script.js',
+    'https://raw.githubusercontent.com/Azalurg/yt-mp3/development/src/playlist.py',
+    'https://raw.githubusercontent.com/Azalurg/RPSLS/master/src/game.py'
+
 ];
 
 let word_speed = 100;

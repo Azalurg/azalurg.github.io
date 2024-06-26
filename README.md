@@ -1,6 +1,6 @@
 # My CV
 
-v 3.1.0
+v 3.1.1
 
 ## Inspirations
 

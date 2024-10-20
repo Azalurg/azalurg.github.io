@@ -18,6 +18,10 @@ section {
     justify-content: center;
     flex-direction: column;
     padding: 10% 0;
+
+    @include respond-to('md') {
+        padding: 5% 0;
+    }
 }
 
 #hello {
@@ -40,6 +44,10 @@ section {
 
 #navigation {
     padding-top: 2rem;
+
+    @include respond-to('md') {
+        display: none;
+    }
 
     h4 {
         margin: 0;
@@ -72,7 +80,7 @@ section {
 #contact {
     display: flex;
     width: 100%;
-    font-size: $fs-h2;
+    font-size: $fs-h1;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
@@ -80,7 +88,9 @@ section {
     a {
         padding-right: 1rem;
         color: $gray-3;
-
+        backdrop-filter: blur(2px);
+        border-radius: 0.5rem;
+        
         &:hover {
             color: $foreground;
         }
@@ -102,11 +112,12 @@ section {
 
 #experience,
 #education {
-    .job{
+    .job {
         // border-left: 1px solid $gray-2;
         padding-left: 2rem;
         margin-bottom: 2rem;
     }
+
     h3 {
         margin: 0;
     }
@@ -239,4 +250,28 @@ section {
     overflow: hidden;
     padding: 0;
     margin-left: calc(100% / 24 * 5);
+}
+
+#scroll {
+
+    display: none;
+
+    @include respond-to('md') {
+        display: block;
+    }
+
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 1rem;
+    color: $foreground;
+    font-size: $fs-h4;
+    font-family: $ff-anonymice;
+    cursor: pointer;
+    transition: all 0.5s ease;
+
+    &:hover {
+        color: $accent-3;
+        scale: 1.3;
+    }
 }

@@ -18,8 +18,7 @@
 
 @mixin block {
     transition: background-size calc($time * 3.1415) ease;
-    background: linear-gradient(to bottom, transparent 64%, $accent-alt-2 0)
-        right center/0% 72% no-repeat;
+    background: linear-gradient(to bottom, transparent 64%, $accent-alt-2 0) right center/0% 72% no-repeat;
     cursor: pointer;
 
     &:hover {
@@ -28,5 +27,31 @@
 
     &:active {
         background-size: 80% 100%;
+    }
+}
+
+@mixin respond-to($breakpoint) {
+    @if $breakpoint =='sm' {
+        @media (max-width: #{$breakpoint-sm}) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint =='md' {
+        @media (max-width: #{$breakpoint-md}) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint =='lg' {
+        @media (max-width: #{$breakpoint-lg}) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint =='xl' {
+        @media (max-width: #{$breakpoint-xl}) {
+            @content;
+        }
     }
 }

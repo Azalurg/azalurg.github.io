@@ -1,7 +1,5 @@
-@import 
-    'reset',
-    'layout',
-    'typography',
-    'sections',
-    'animations',
-    'mixins';
+@use 'reset';
+@use 'layout';
+@use 'typography'; 
+@use 'sections';
+@use 'animations';
